@@ -1,7 +1,7 @@
 # SassySpecter: AI Bot for StarCraft: Brood War and StarCraft II
 
 SassySpecter is a fork of CommandCenter (https://github.com/davechurchill/commandcenter).
-To goal is to have a bot able to play the 3 races from the 2 StarCraft games, with the same code (modulo API-specific parts), by using massively the Constraint Programmaing toolkit GHOST (https://github.com/richoux/GHOST) for decision-making. 
+The goal is to have a bot able to play the 3 races from the 2 StarCraft games, with the same code (modulo API-specific parts), by using massively the Constraint Programmaing toolkit GHOST (https://github.com/richoux/GHOST) for decision-making. 
 
 # CommandCenter's README
 
@@ -119,7 +119,7 @@ $ cmake .
 $ make
 ```
 
-# Bot Development
+## Bot Development
 
 If you are familiar with the architecture of UAlbertaBot, the logic of CommandCenter is quite similar. The biggest difference is that information relating to the map, baselocation, etc are no longer globally accessible. This data now lives inside the main CCBot class, and must be accessed via a reference to the instance of that class. Because of this, most classes in CommandCenter carry with them a reference to the bot's main CCBot object, from which all game related information, observations, and queries can be made.
 
