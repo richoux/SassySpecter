@@ -1,5 +1,8 @@
 # SassySpecter: AI Bot for StarCraft: Brood War and StarCraft II
 
+[![License: GNU GPL v3](https://img.shields.io/badge/License-GNU_GPL_v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.en.html)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+
 SassySpecter is a fork of [CommandCenter](https://github.com/davechurchill/commandcenter).
 The  goal is  to have  a  bot able  to play  the  3 races  from the  2
 StarCraft games,  with the same  code (modulo API-specific  parts), by
@@ -20,8 +23,7 @@ using   massively   the    Constraint   Programmaing   toolkit   [GHOST](https:/
   SC2 API is a nice option.
 
 ## Developer Install / Compile Instructions (Windows)
-*           Download           and           install           [Visual
-  Studio](https://www.visualstudio.com/downloads/).   Make   sure   to
+* Download and install [Visual Studio](https://www.visualstudio.com/downloads/). Make sure to
   select  the  **Visual  Studio  2017 compiler  (MSVC  v141)**  during
   installation. If you missed it, you can always install it afterwise
   through vs_community.exe file.
