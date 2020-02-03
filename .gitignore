@@ -10,6 +10,9 @@ vs/.vs/
 vs/sassyspecter
 *~
 
+# SC 1 and 2 games and SC APIs
+kickstarter/
+
 bin/SassySpecter
 bin/*.exe
 bin/*.ilk

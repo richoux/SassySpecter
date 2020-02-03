@@ -1,7 +1,21 @@
 # SassySpecter: AI Bot for StarCraft: Brood War and StarCraft II
 
 SassySpecter is a fork of CommandCenter (https://github.com/davechurchill/commandcenter).
-The goal is to have a bot able to play the 3 races from the 2 StarCraft games, with the same code (modulo API-specific parts), by using massively the Constraint Programmaing toolkit GHOST (https://github.com/richoux/GHOST) for decision-making. 
+The  goal is  to have  a  bot able  to play  the  3 races  from the  2
+StarCraft games,  with the same  code (modulo API-specific  parts), by
+using   massively   the    Constraint   Programmaing   toolkit   GHOST
+(https://github.com/richoux/GHOST) for decision-making. 
+
+## Kickstarter: where to get SC1&2 and their APIs?
+
+* You need StarCraft : Brood War  version 1.16.1. You won't be able to
+  have it through  Battle.net now. You can download  the right version
+  provided   by  ICCup   (chill  out,   everything  is   legal  here):
+  http://files.theabyss.ru/sc/starcraft.zip
+*    You    can    download    for    free    StarCraft    II    here:
+  https://www.blizzard.com/en-us/download/confirmation?platform=windows&locale=en_US&version=LIVE&id=sc2
+* SassySpecter uses BWAPI v4.4.0 available here: https://github.com/bwapi/bwapi/releases/tag/v4.4.0
+* Precompiled libs for SC2 API are here: http://blzdistsc2-a.akamaihd.net/SC2API_Binary_vs2017.zip
 
 # CommandCenter's README
 
