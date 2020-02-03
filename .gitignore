@@ -8,6 +8,7 @@ cmake_install.cmake
 .vscode/
 vs/.vs/
 vs/sassyspecter
+*~
 
 bin/SassySpecter
 bin/*.exe
@@ -18,3 +19,4 @@ bin/TechTree.json
 vs/RelWithDebInfo/SassySpecter.log
 *.log
 *.pdb
+
