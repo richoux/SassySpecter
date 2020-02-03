@@ -58,7 +58,7 @@ int main(int argc, char* argv[])
         exit(-1);
     }
 
-    // Add the custom bot, it will control the players.
+    // Add the custom bot, it will control the player.
     SassySpecterBot bot;
 
     
@@ -90,7 +90,7 @@ int main(int argc, char* argv[])
 
 #include <BWAPI/Client.h>
 
-void UAlbertaBot_BWAPIReconnect() 
+void BWAPIReconnect() 
 {
     while(!BWAPI::BWAPIClient.connect())
     {
@@ -98,7 +98,7 @@ void UAlbertaBot_BWAPIReconnect()
     }
 }
 
-void UAlbertaBot_PlayGame()
+void PlayGame()
 {
     SassySpecterBot bot;
     
@@ -146,7 +146,7 @@ int main(int argc, char * argv[])
         // if we are not currently connected to BWAPI, try to reconnect
         if (!BWAPI::BWAPIClient.isConnected())
         {
-            UAlbertaBot_BWAPIReconnect();
+            BWAPIReconnect();
         }
 
         // if we have connected to BWAPI
@@ -170,7 +170,7 @@ int main(int argc, char * argv[])
             {
                 std::cout << "Playing game " << gameCount++ << " on map " << BWAPI::Broodwar->mapFileName() << "\n";
 
-                UAlbertaBot_PlayGame();
+                PlayGame();
             }
         }
 

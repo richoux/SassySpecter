@@ -10,7 +10,7 @@ class SassySpecterBot;
 
 class BaseLocation
 {
-    SassySpecterBot &                     m_bot;
+    SassySpecterBot &           m_bot;
     DistanceMap                 m_distanceMap;
 
     CCTilePosition              m_depotPosition;

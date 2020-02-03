@@ -7,10 +7,10 @@ BotConfig::BotConfig()
     ConfigFileFound                     = true;
     ConfigFileParsed                    = true;
     ConfigFileLocation                  = "BotConfig.txt";
-    BotName                             = "UAlbertaBot";
-    Authors                             = "Dave Churchill";
+    BotName                             = "SassySpecter";
+    Authors                             = "Florian Richoux";
     PrintInfoOnStart                    = false;
-    StrategyName                        = "Protoss_ZealotRush";
+    StrategyName                        = "";
     ReadDir                             = "read/";
     WriteDir                            = "write/";
     UseEnemySpecificStrategy            = false;
