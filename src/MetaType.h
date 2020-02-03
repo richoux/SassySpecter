@@ -11,17 +11,17 @@ namespace MetaTypes
 class SassySpecterBot;
 class MetaType
 {
-    SassySpecterBot *         m_bot;
-    size_t          m_type;
-    std::string     m_name;
-    CCRace          m_race;
-    UnitType        m_unitType;
-    CCUpgrade       m_upgrade;
+    SassySpecterBot *m_bot;
+    size_t           m_type;
+    std::string      m_name;
+    CCRace           m_race;
+    UnitType         m_unitType;
+    CCUpgrade        m_upgrade;
 
 #ifndef SC2API
     BWAPI::TechType m_tech;
 #endif
-    
+
 public:
 
     MetaType();
