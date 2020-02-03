@@ -1,10 +1,22 @@
-Some part of SassySpecter's code is under the terms of the MIT License, and the other part under the terms of the GNU General Public License, version 3. Due to the copyleft property of the latter, you can consider that the whole SassySpecter project is under the terms of the GNU General Public License, version 3.
+Some part of SassySpecter's code is under the terms of the MIT
+License, and the other part under the terms of the GNU General Public
+License, version 3. Due to the copyleft property of the latter, you
+can consider that the whole SassySpecter project is under the terms of
+the GNU General Public License, version 3.
 
-The reason of this mix of licenses is simple: SassySpecter is a fork a CommandCenter, written by David Churchill under the terms of the MIT License. But it massively uses the Constraint Programming toolkit GHOST under the GNU GPL v3 license, forcing the whole SassySpecter project to be distributed under the same license terms.
+The reason of this mix of licenses is simple: SassySpecter is a fork a
+CommandCenter, written by David Churchill under the terms of the MIT
+License. But it massively uses the Constraint Programming toolkit
+GHOST under the GNU GPL v3 license, forcing the whole SassySpecter
+project to be distributed under the same license terms.
 
-Original files from CommandCenter remains under the terms of the MIT License. David Churchill is the copyright holder of the original code in these files, and Florian Richoux is the copyright holder of the modified and the new code in these files.
+Original files from CommandCenter remains under the terms of the MIT
+License. David Churchill is the copyright holder of the original code
+in these files, and Florian Richoux is the copyright holder of the
+modified and the new code in these files.
 
-New files are under the terms of the GNU General Public License, version 3, and are easily recognizable thanks to the following header:
+New files are under the terms of the GNU General Public License,
+version 3, and are easily recognizable thanks to the following header:
 
 /*
  * SassySpecter is an AI bot playing to both StarCraft: Brood War and StarCraft II, with the same code.
