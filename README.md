@@ -16,9 +16,10 @@ using   massively   the    Constraint   Programmaing   toolkit   [GHOST](https:/
 * You can download [StarCraft II](https://www.blizzard.com/en-us/download/confirmation?platform=windows&locale=en_US&version=LIVE&id=sc2) for free.
   
 ### APIs
-* SassySpecter uses [BWAPI v4.4.0](https://github.com/bwapi/bwapi/releases/tag/v4.4.0).
+* SassySpecter uses [BWAPI v4.4.0](https://github.com/bwapi/bwapi/releases/tag/v4.4.0). You will need to **build both BWAPILIB and BWAPIClient projects** from BWAPI.
 * [Precompiled libs](http://blzdistsc2-a.akamaihd.net/SC2API_Binary_vs2017.zip) for
   SC2 API is a nice option.
+
 
 ## Developer Install / Compile Instructions (Windows)
 * Download and install [Visual Studio](https://www.visualstudio.com/downloads/). Make sure to
@@ -48,6 +49,7 @@ using   massively   the    Constraint   Programmaing   toolkit   [GHOST](https:/
   * Running the program from the console
   * Click "Local Windows Debugger" in VS to launch the program from within VS. To do this, you need to set the "Working Directory" option under "Debugging" to "$(ProjectDir)/../bin/" (I don't know why this option won't save)
 * If you are running the BW version of the bot, you must then start BW via Chaoslauncher with BWAPI injected
+* If you are running the SC2 version, you need to copy the map [InterloperLE.SC2Map](https://www.richoux.fr/files/InterloperLE.SC2Map) into a "Maps" folder in your StarCraft II directory.
 * The SassySpecter/bin/BotConfig.txt file must be in the same directory as the .exe to run properly
 
 ## CommandCenter
