@@ -39,11 +39,11 @@ void DistanceMap::computeDistanceMap(SassySpecterBot & m_bot, const CCTilePositi
     m_width = m_bot.Map().width();
     m_height = m_bot.Map().height();
     m_dist = std::vector<std::vector<int>>(m_width, std::vector<int>(m_height, -1));
-    m_sortedTiles.reserve(m_width * m_height);
+    m_sortedTiles.reserve( static_cast<size_t>( m_width ) * m_height);
 
     // the fringe for the BFS we will perform to calculate distances
     std::vector<CCTilePosition> fringe;
-    fringe.reserve(m_width * m_height);
+    fringe.reserve( static_cast<size_t>( m_width ) * m_height);
     fringe.push_back(startTile);
     m_sortedTiles.push_back(startTile);
 

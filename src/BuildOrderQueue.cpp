@@ -50,7 +50,7 @@ void BuildOrderQueue::skipItem()
 bool BuildOrderQueue::canSkipItem()
 {
     // does the queue have more elements
-    bool bigEnough = m_queue.size() > (size_t)(1 + m_numSkippedItems);
+    bool bigEnough = m_queue.size() > ( 1 + static_cast<size_t>( m_numSkippedItems ) );
 
     if (!bigEnough)
     {

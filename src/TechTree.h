@@ -8,7 +8,7 @@ class MetaType;
 
 struct TypeData
 {
-    CCRace                  race;
+    CCRace                  race{};
     int                     mineralCost     = 0;      // mineral cost of the item
     int                     gasCost         = 0;          // gas cost of the item
     int                     supplyCost      = 0;       // supply cost of the item

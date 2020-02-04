@@ -6,6 +6,7 @@ MetaType::MetaType()
     : m_bot         (nullptr)
     , m_type        (MetaTypes::None)
     , m_name        ("MetaType")
+    , m_race        ()
     , m_unitType    ()
     , m_upgrade     ()
 {

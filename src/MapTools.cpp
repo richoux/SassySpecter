@@ -113,7 +113,7 @@ void MapTools::onStart()
                         if (std::abs(rx) + std::abs(ry) == 6) { continue; }
                         if (!isValidTile(CCTilePosition(x+rx, y+ry))) { continue; }
 
-                        m_depotBuildable[x+rx][y+ry] = false;
+                        m_depotBuildable[static_cast<size_t>(x)+rx][static_cast<size_t>(y)+ry] = false;
                     }
                 }
             }
@@ -182,7 +182,7 @@ void MapTools::computeConnectivity()
 {
     // the fringe data structe we will use to do our BFS searches
     std::vector<std::array<int, 2>> fringe;
-    fringe.reserve(m_width*m_height);
+    fringe.reserve(static_cast<size_t>( m_width ) * m_height);
     int sectorNumber = 0;
 
     // for every tile on the map, do a connected flood fill using BFS
@@ -595,8 +595,8 @@ float MapTools::terrainHeight(const CCPosition & point) const
         return 0.0f;
     }
 
-    assert(grid.data.size() == static_cast<unsigned long>(grid.width * grid.height));
-    unsigned char value = grid.data[pointI.x + pointI.y * grid.width];
+    assert(grid.data.size() == static_cast<size_t>(grid.width) * grid.height);
+    unsigned char value = grid.data[ static_cast<size_t>( pointI.x ) + static_cast<size_t>( pointI.y ) * grid.width];
     return (static_cast<float>(value) - 127.0f) / 8.f;
 #else
     return 0;
