@@ -11,10 +11,8 @@ using   massively   the    Constraint   Programmaing   toolkit   [GHOST](https:/
 ## Kickstarter: where to get SC1&2 and their APIs?
 
 ### Games
-* You need StarCraft : Brood War version 1.16.1. You won't be able to
-  have it through  Battle.net now. You can download  the [right version
-  provided   by  ICCup](http://files.theabyss.ru/sc/starcraft.zip)   (chill  out,   everything  is   legal  here).
-  
+<!-- * You need StarCraft : Brood War version 1.16.1. You won't be able to have it through Battle.net now. You can download the [right version provided by ICCup](http://files.theabyss.ru/sc/starcraft.zip) (chill out, everything is legal here). -->
+* You need StarCraft : Brood War version 1.16.1. You won't be able to have it through Battle.net now. You can download the [right version provided by ICCup](https://www.richoux.fr/files/starcraft.zip) (chill out, everything is legal here).
 * You can download [StarCraft II](https://www.blizzard.com/en-us/download/confirmation?platform=windows&locale=en_US&version=LIVE&id=sc2) for free.
   
 ### APIs
