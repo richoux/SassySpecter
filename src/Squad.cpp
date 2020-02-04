@@ -49,7 +49,7 @@ void Squad::onFrame()
         m_meleeManager.execute(m_order);
         m_rangedManager.execute(m_order);
 
-        //_detectorManager.setUnitClosestToEnemy(unitClosestToEnemy());
+        //_detectorManager.setunitClosestToOrderPosition(unitClosestToOrderPosition());
         //_detectorManager.execute(_order);
     }
 }
@@ -197,6 +197,7 @@ CCPosition Squad::calcCenter() const
     }
 
     CCPosition sum(0, 0);
+    // Shall we remove outliers?
     for (auto unit: m_units)
     {
         BOT_ASSERT(unit.isValid(), "null unit in squad calcCenter");
@@ -235,7 +236,7 @@ CCPosition Squad::calcRegroupPosition() const
     }
 }
 
-Unit Squad::unitClosestToEnemy() const
+Unit Squad::unitClosestToOrderPosition() const
 {
     Unit closest;
     float closestDist = std::numeric_limits<float>::max();

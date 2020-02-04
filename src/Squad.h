@@ -9,10 +9,10 @@ class SassySpecterBot;
 
 class Squad
 {
-    SassySpecterBot &             m_bot;
+    SassySpecterBot     &m_bot;
 
     std::string         m_name;
-    std::set<Unit> m_units;
+    std::set<Unit>      m_units;
     std::string         m_regroupStatus;
     int                 m_lastRetreatSwitch;
     bool                m_lastRetreatSwitchVal;
@@ -24,7 +24,7 @@ class Squad
 
     std::map<Unit, bool> m_nearEnemy;
 
-    Unit unitClosestToEnemy() const;
+    Unit unitClosestToOrderPosition() const;
 
     void updateUnits();
     void addUnitsToMicroManagers();
