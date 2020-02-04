@@ -25,6 +25,7 @@ BotConfig::BotConfig()
     DrawGameInfo                        = true;
     DrawProductionInfo                  = true;
     DrawTileInfo                        = false;
+    DrawBaseLocationInfo                = false;
     DrawWalkableSectors                 = false;
     DrawScoutInfo                       = false;
     DrawResourceInfo                    = false;

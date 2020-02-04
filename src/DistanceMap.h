@@ -19,7 +19,7 @@ class DistanceMap
     
 public:
     
-    DistanceMap();
+    DistanceMap() = default;
     void computeDistanceMap(SassySpecterBot & m_bot, const CCTilePosition & startTile);
 
     int getDistance(int tileX, int tileY) const;

@@ -8,6 +8,7 @@ Condition::Condition()
     , m_type    (ConditionTypes::Invalid)
     , m_op      (ConditionOperators::Invalid)
     , m_player  (0)
+    , m_intValue(0)
 {
 
 }

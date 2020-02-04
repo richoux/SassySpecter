@@ -19,7 +19,7 @@ struct Strategy
     Condition   m_scoutCondition;
     Condition   m_attackCondition;
 
-    Strategy();
+    Strategy() = default;
     Strategy(const std::string & name, const CCRace & race, const BuildOrder & buildOrder, const Condition & scoutCondition, const Condition & attackCondition);
 };
 

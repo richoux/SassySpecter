@@ -22,6 +22,7 @@ struct UnitInfo
     UnitInfo()
         : id(0)
         , lastHealth(0)
+        , lastShields(0)
         , player(-1)
         , lastPosition(0, 0)
         , progress(1.0)

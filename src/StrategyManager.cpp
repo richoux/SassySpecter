@@ -4,11 +4,6 @@
 #include "Util.h"
 #include "MetaType.h"
 
-Strategy::Strategy()
-{
-
-}
-
 Strategy::Strategy(const std::string & name, const CCRace & race, const BuildOrder & buildOrder, const Condition & scoutCondition, const Condition & attackCondition)
     : m_name            (name)
     , m_race            (race)

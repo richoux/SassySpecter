@@ -6,11 +6,6 @@ const size_t LegalActions = 4;
 const int actionX[LegalActions] = {1, -1, 0, 0};
 const int actionY[LegalActions] = {0, 0, 1, -1};
 
-DistanceMap::DistanceMap() 
-{
-    
-}
-
 int DistanceMap::getDistance(int tileX, int tileY) const
 { 
     BOT_ASSERT(tileX < m_width && tileY < m_height, "Index out of range: X = %d, Y = %d", tileX, tileY);

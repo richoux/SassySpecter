@@ -95,6 +95,9 @@
     <ClInclude Include="..\src\WorkerData.h" />
     <ClInclude Include="..\src\WorkerManager.h" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGUID>{D4AC5062-8BEA-46D8-9231-57241C214F1C}</ProjectGUID>
     <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
