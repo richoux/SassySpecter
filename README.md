@@ -15,7 +15,7 @@ using   massively   the    Constraint   Programmaing   toolkit   [GHOST](https:/
   have it through  Battle.net now. You can download  the [right version
   provided   by  ICCup](http://files.theabyss.ru/sc/starcraft.zip)   (chill  out,   everything  is   legal  here).
   
-* You can download for free [StarCraft II](https://www.blizzard.com/en-us/download/confirmation?platform=windows&locale=en_US&version=LIVE&id=sc2).
+* You can download [StarCraft II](https://www.blizzard.com/en-us/download/confirmation?platform=windows&locale=en_US&version=LIVE&id=sc2) for free.
   
 ### APIs
 * SassySpecter uses [BWAPI v4.4.0](https://github.com/bwapi/bwapi/releases/tag/v4.4.0).
@@ -26,7 +26,7 @@ using   massively   the    Constraint   Programmaing   toolkit   [GHOST](https:/
 * Download and install [Visual Studio](https://www.visualstudio.com/downloads/). Make sure to
   select  the  **Visual  Studio  2017 compiler  (MSVC  v141)**  during
   installation. If you missed it, you can always install it afterwise
-  through vs_community.exe file.
+  by launching again the vs_community.exe file.
 * Clone this git repository to a folder on your PC
 * Open "SassySpecter/vs/SassySpecter.sln" in VS
 * If you compile the SassySpecter project with the x64 Platform, it will compile the SC2 bot
@@ -76,8 +76,4 @@ CommandCenter currently provides the following features:
 * Once a specific condition has been reached (having 12 combat units, by default), it will commence an attack, sending waves of units at the enemy base
 * Squads can be formed, consisting of multiple units following a specific order such as attack or defend a given location
 
-CommandCenter should eventually have all of the functionality of UAlbertaBot, however much of its features are not currently completed. Here is an up-to-date list of features currently missing from CommandCenter that will be implemented soon:
-* Only units and basic buildings can be constructed via the ProductionManager. No add-ons, research, or upgrades yet.
-* There is no automatic build-order planning system
-* There is no combat simulation package for predicting combat battle victory
-* The bot only plays 1v1, and will have undefined behavior / crash if played against multiple enemies or on teams
+The bot only plays 1v1, and will have undefined behavior / crash if played against multiple enemies or on teams
