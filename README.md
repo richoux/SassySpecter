@@ -3,6 +3,9 @@
 [![License: GNU GPL v3](https://img.shields.io/badge/License-GNU_GPL_v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.en.html)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
+**Last version of the code is in the [develop](https://github.com/richoux/SassySpecter/tree/develop) branch! Check it out!**
+
+
 SassySpecter is a fork of [CommandCenter](https://github.com/davechurchill/commandcenter).
 The  goal is  to have  a  bot able  to play  the  3 races  from the  2
 StarCraft games,  with the same  code (modulo API-specific  parts), by
