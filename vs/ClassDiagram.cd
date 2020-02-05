@@ -1,417 +1,493 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="BaseLocation" Collapsed="true">
-    <Position X="5.25" Y="0.5" Width="1.5" />
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="BaseLocation">
+    <Position X="9.5" Y="5.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
       <HashCode>CBAEIJCgqQgCgAAACCoQQGBBAAQAAAAAACAAQAAAgAI=</HashCode>
       <FileName>C:\StarCraft AI\SassySpecter\src\BaseLocation.h</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="m_bot" />
+      <Field Name="m_distanceMap" />
+    </ShowAsAssociation>
   </Class>
-  <Class Name="BaseLocationManager" Collapsed="true">
-    <Position X="7" Y="0.5" Width="1.5" />
+  <Class Name="BaseLocationManager">
+    <Position X="9.25" Y="11" Width="4.25" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
       <HashCode>CAAACAAAAAAAAAhAAqBAABBAAAAgIAIJAAAAIAAIAAA=</HashCode>
       <FileName>C:\StarCraft AI\SassySpecter\src\BaseLocationManager.h</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="m_bot" />
+    </ShowAsAssociation>
   </Class>
-  <Class Name="BotConfig" Collapsed="true">
-    <Position X="8.75" Y="0.5" Width="1.5" />
+  <Class Name="BotConfig">
+    <Position X="12.5" Y="3.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
       <HashCode>gQSAAEAQUDIAIBAQQAEwxQgQUhBAMAIAALEAACAgAWA=</HashCode>
       <FileName>C:\StarCraft AI\SassySpecter\src\BotConfig.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Building" Collapsed="true">
-    <Position X="10.5" Y="0.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAQAABAAAAAAAEAAAAAIIwCAAAAJAAACAAAAAAACAAA=</HashCode>
-      <FileName>C:\StarCraft AI\SassySpecter\src\Building.h</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="BuildingData" Collapsed="true">
-    <Position X="12.25" Y="0.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAABAgAAAAAAAAAAAAMAABAAAAAEAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>C:\StarCraft AI\SassySpecter\src\BuildingData.h</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="BuildingManager" Collapsed="true">
-    <Position X="14" Y="0.5" Width="1.5" />
+  <Class Name="BuildingManager">
+    <Position X="15.5" Y="17.25" Width="2.5" />
+    <Members>
+      <Field Name="m_debugMode" Hidden="true" />
+      <Field Name="m_reservedGas" Hidden="true" />
+      <Field Name="m_reservedMinerals" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
       <HashCode>QJAAQAAAAAAAAAAAAiGAAJAAAAAADAIwAYABCAAAKgg=</HashCode>
       <FileName>C:\StarCraft AI\SassySpecter\src\BuildingManager.h</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="m_bot" />
+      <Field Name="m_buildingPlacer" />
+    </ShowAsAssociation>
   </Class>
-  <Class Name="BuildingPlacer" Collapsed="true">
-    <Position X="5.25" Y="1.5" Width="1.5" />
+  <Class Name="BuildingPlacer">
+    <Position X="15.25" Y="14.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
       <HashCode>AgCAABQAAAAAAAAFCCQAABAAAAMAAAAAABABAAAAAAg=</HashCode>
       <FileName>C:\StarCraft AI\SassySpecter\src\BuildingPlacer.h</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="m_bot" />
+    </ShowAsAssociation>
   </Class>
-  <Class Name="BuildOrder" Collapsed="true">
-    <Position X="7" Y="1.5" Width="1.5" />
+  <Class Name="BuildOrder">
+    <Position X="19" Y="11" Width="2.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
       <HashCode>AAAABAAAAAAAAAAAAIAAACAAAAEAAAAAAAAAAAACAAA=</HashCode>
       <FileName>C:\StarCraft AI\SassySpecter\src\BuildOrder.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="BuildOrderQueue" Collapsed="true">
-    <Position X="8.75" Y="1.5" Width="1.5" />
+  <Class Name="BuildOrderQueue">
+    <Position X="17.5" Y="14" Width="2.75" />
+    <Members>
+      <Field Name="m_defaultPrioritySpacing" Hidden="true" />
+      <Field Name="m_highestPriority" Hidden="true" />
+      <Field Name="m_lowestPriority" Hidden="true" />
+      <Field Name="m_numSkippedItems" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
       <HashCode>BAAEAAAAAFQAIAQAiKAAAQCIAAEAAEAAAgAAGAAAwAA=</HashCode>
       <FileName>C:\StarCraft AI\SassySpecter\src\BuildOrderQueue.h</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="m_bot" />
+    </ShowAsAssociation>
   </Class>
-  <Class Name="SassySpecterBot" Collapsed="true">
-    <Position X="12.25" Y="2.5" Width="1.5" />
+  <Class Name="SassySpecterBot">
+    <Position X="8.5" Y="8.25" Width="3.75" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
       <HashCode>AEBQADAAghGIIAABABAAAgCgAgAQCBggACIoEBAABAE=</HashCode>
       <FileName>C:\StarCraft AI\SassySpecter\src\SassySpecterBot.h</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="m_bases" />
+      <Field Name="m_bases" />
+      <Field Name="m_gameCommander" />
+      <Field Name="m_gameCommander" />
+      <Field Name="m_map" />
+      <Field Name="m_map" />
+      <Field Name="m_config" />
+      <Field Name="m_config" />
+      <Field Name="m_strategy" />
+      <Field Name="m_strategy" />
+      <Field Name="m_techTree" />
+      <Field Name="m_techTree" />
+      <Field Name="m_unitInfo" />
+      <Field Name="m_unitInfo" />
+      <Field Name="m_workers" />
+      <Field Name="m_workers" />
+    </ShowAsAssociation>
   </Class>
-  <Class Name="CombatCommander" Collapsed="true">
-    <Position X="10.5" Y="1.5" Width="1.5" />
+  <Class Name="CombatCommander">
+    <Position X="3.75" Y="17.25" Width="2.5" />
+    <Members>
+      <Field Name="m_attackStarted" Hidden="true" />
+      <Field Name="m_initialized" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
       <HashCode>IAAAAEBEAAAAEAAAACgAAFAACAAAAAIAcAAAASAABCA=</HashCode>
       <FileName>C:\StarCraft AI\SassySpecter\src\CombatCommander.h</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="m_bot" />
+      <Field Name="m_squadData" />
+    </ShowAsAssociation>
   </Class>
-  <Class Name="Condition" Collapsed="true">
-    <Position X="12.25" Y="1.5" Width="1.5" />
+  <Class Name="Condition">
+    <Position X="12.5" Y="14.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
       <HashCode>AAQgIAIQAACAAAAAACEEAAAACABAAAEQABAAAAAAAAA=</HashCode>
       <FileName>C:\StarCraft AI\SassySpecter\src\Condition.h</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="m_bot" />
+      <Field Name="m_lhs" />
+      <Field Name="m_rhs" />
+    </ShowAsAssociation>
   </Class>
-  <Class Name="DistanceMap" Collapsed="true">
-    <Position X="14" Y="1.5" Width="1.5" />
+  <Class Name="DistanceMap">
+    <Position X="9.5" Y="3.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
       <HashCode>AAAAAAAAQAAAQAARQAIAABCABAEAAACAAAAAAAAAAAA=</HashCode>
       <FileName>C:\StarCraft AI\SassySpecter\src\DistanceMap.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="GameCommander" Collapsed="true">
-    <Position X="5.25" Y="2.5" Width="1.5" />
+  <Class Name="GameCommander">
+    <Position X="9.75" Y="13.75" Width="2.5" />
+    <Members>
+      <Field Name="m_initialScoutSet" Hidden="true" />
+      <Field Name="m_timer" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
       <HashCode>gAoAAEIgKCAAAAEAACAAAJAASAAAAEIQAAAAAABgAQQ=</HashCode>
       <FileName>C:\StarCraft AI\SassySpecter\src\GameCommander.h</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="m_bot" />
+      <Field Name="m_combatCommander" />
+      <Field Name="m_productionManager" />
+      <Field Name="m_scoutManager" />
+    </ShowAsAssociation>
   </Class>
-  <Class Name="MapTools" Collapsed="true">
-    <Position X="7" Y="2.5" Width="1.5" />
+  <Class Name="MapTools">
+    <Position X="15.5" Y="4.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
       <HashCode>CgQikIADCBAAIAQBYDIA4FKBQyAAQAaAAAEQARAEAIA=</HashCode>
       <FileName>C:\StarCraft AI\SassySpecter\src\MapTools.h</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="m_bot" />
+    </ShowAsAssociation>
   </Class>
-  <Class Name="MeleeManager" Collapsed="true">
-    <Position X="2.75" Y="1.75" Width="1.5" />
+  <Class Name="MeleeManager">
+    <Position X="6.75" Y="6" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
       <HashCode>AAAAACABAAAAAAAAAAAAAAAAAgAAAAAAAAQAAAAAAAI=</HashCode>
       <FileName>C:\StarCraft AI\SassySpecter\src\MeleeManager.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="MetaType" Collapsed="true">
-    <Position X="8.75" Y="2.5" Width="1.5" />
+  <Class Name="MetaType">
+    <Position X="15" Y="2.5" Width="2.5" />
+    <Members>
+      <Field Name="m_name" Hidden="true" />
+      <Field Name="m_race" Hidden="true" />
+      <Field Name="m_type" Hidden="true" />
+      <Field Name="m_upgrade" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
       <HashCode>UAgAIABAQABAAABAAGAAAQBAIAAAAAAgQAYEAAAABAA=</HashCode>
       <FileName>C:\StarCraft AI\SassySpecter\src\MetaType.h</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="m_bot" />
+      <Field Name="m_tech" />
+      <Field Name="m_unitType" />
+    </ShowAsAssociation>
   </Class>
-  <Class Name="MicroManager" Collapsed="true">
-    <Position X="1.75" Y="0.5" Width="1.5" />
+  <Class Name="MicroManager">
+    <Position X="5.5" Y="4" Width="2" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
       <HashCode>AAAAAAEBAAEAEAAAACAEAAAAAAAAAAAAAAQQAAAAABA=</HashCode>
       <FileName>C:\StarCraft AI\SassySpecter\src\MicroManager.h</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="order" />
+      <Field Name="m_bot" />
+    </ShowAsAssociation>
   </Class>
-  <Class Name="ProductionManager" Collapsed="true">
-    <Position X="10.5" Y="2.5" Width="1.5" />
+  <Class Name="ProductionManager">
+    <Position X="12.25" Y="18" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
       <HashCode>IAAACBAAAAAAIAkAACABEBAAwAAgAIIAQABAABIAAAA=</HashCode>
       <FileName>C:\StarCraft AI\SassySpecter\src\ProductionManager.h</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="m_bot" />
+      <Field Name="m_buildingManager" />
+      <Field Name="m_queue" />
+    </ShowAsAssociation>
   </Class>
-  <Class Name="RangedManager" Collapsed="true">
-    <Position X="0.5" Y="1.75" Width="1.5" />
+  <Class Name="RangedManager">
+    <Position X="4.5" Y="6" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
       <HashCode>AAACACABAAAAAAAAAAAAAAAAAgAAAAAAAAQAAAAAAAA=</HashCode>
       <FileName>C:\StarCraft AI\SassySpecter\src\RangedManager.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ScoutManager" Collapsed="true">
-    <Position X="14" Y="2.5" Width="1.5" />
+  <Class Name="ScoutManager">
+    <Position X="8" Y="17.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
       <HashCode>AAACQEAICCAAAAACICAAABIAABAAAAIQAAAAAAgAAAA=</HashCode>
       <FileName>C:\StarCraft AI\SassySpecter\src\ScoutManager.h</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="m_bot" />
+      <Field Name="m_scoutUnit" />
+    </ShowAsAssociation>
   </Class>
-  <Class Name="Squad" Collapsed="true">
-    <Position X="5.25" Y="3.5" Width="1.5" />
+  <Class Name="Squad">
+    <Position X="1.75" Y="8.75" Width="2.5" />
+    <Members>
+      <Field Name="m_lastRetreatSwitch" Hidden="true" />
+      <Field Name="m_lastRetreatSwitchVal" Hidden="true" />
+      <Field Name="m_name" Hidden="true" />
+      <Field Name="m_priority" Hidden="true" />
+      <Field Name="m_regroupStatus" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
-      <HashCode>EEAAAmKAIAoQUAAAAKAgQAAAIFACAQMEAAEUAgQBSAA=</HashCode>
+      <HashCode>EEAAAmKAAAoQUAAAAKAgQAAAIFACAQMEAAEUAgQBaAA=</HashCode>
       <FileName>C:\StarCraft AI\SassySpecter\src\Squad.h</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="m_bot" />
+      <Field Name="m_meleeManager" />
+      <Field Name="m_order" />
+      <Field Name="m_rangedManager" />
+    </ShowAsAssociation>
   </Class>
-  <Class Name="SquadData" Collapsed="true">
-    <Position X="7" Y="3.5" Width="1.5" />
+  <Class Name="SquadData">
+    <Position X="1.75" Y="11" Width="2.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
       <HashCode>ABAoAEAAAAIAAUAAQCAAAMAAAAAAAAIAAAAAAAgBgEA=</HashCode>
       <FileName>C:\StarCraft AI\SassySpecter\src\SquadData.h</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="m_bot" />
+    </ShowAsAssociation>
   </Class>
-  <Class Name="SquadOrder" Collapsed="true">
-    <Position X="8.75" Y="3.5" Width="1.5" />
+  <Class Name="SquadOrder">
+    <Position X="2" Y="6.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
       <HashCode>AAAAIAAAAiAIAAAAAAAAAAAAAQAABAAAKAAAAAAAAAA=</HashCode>
       <FileName>C:\StarCraft AI\SassySpecter\src\SquadOrder.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="StrategyManager" Collapsed="true">
-    <Position X="10.5" Y="3.5" Width="1.5" />
+  <Class Name="StrategyManager">
+    <Position X="15" Y="6.5" Width="2.75" />
+    <Members>
+      <Field Name="m_enemyRace" Hidden="true" />
+      <Field Name="m_selfRace" Hidden="true" />
+      <Field Name="m_totalGamesPlayed" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
       <HashCode>CAAIAAAAgAAwIAgQACACABAhiAAAAooAAgAAAAAAAAA=</HashCode>
       <FileName>C:\StarCraft AI\SassySpecter\src\StrategyManager.h</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="m_bot" />
+      <Field Name="m_emptyBuildOrder" />
+    </ShowAsAssociation>
   </Class>
-  <Class Name="TechTree" Collapsed="true">
-    <Position X="12.25" Y="3.5" Width="1.5" />
+  <Class Name="TechTree">
+    <Position X="14.75" Y="11.25" Width="3.25" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
       <HashCode>AAAQAAAAAAAAQAAAACAAABAQMgAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>C:\StarCraft AI\SassySpecter\src\TechTree.h</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="m_bot" />
+    </ShowAsAssociation>
   </Class>
-  <Class Name="Timer" Collapsed="true">
-    <Position X="14" Y="3.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAACAAAAAAAAAAIyEAAAABCAAIAgAAKAAAAAAEAEACA=</HashCode>
-      <FileName>C:\StarCraft AI\SassySpecter\src\Timer.hpp</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Unit" Collapsed="true">
-    <Position X="5.25" Y="4.5" Width="1.5" />
+  <Class Name="Unit">
+    <Position X="18.5" Y="8.25" Width="2.75" />
+    <Members>
+      <Field Name="m_unitID" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
       <HashCode>AAADIBAAoACCCQCAICAAoQRAUWEkAAgAIIYgAAUiAAA=</HashCode>
       <FileName>C:\StarCraft AI\SassySpecter\src\Unit.h</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="m_unitType" />
+      <Field Name="m_unit" />
+    </ShowAsAssociation>
   </Class>
-  <Class Name="UnitData" Collapsed="true">
-    <Position X="7" Y="4.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAACAAKAQQEBAAAQQAEAAAACABAAABQAg=</HashCode>
-      <FileName>C:\StarCraft AI\SassySpecter\src\UnitData.h</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="UnitInfoManager" Collapsed="true">
-    <Position X="8.75" Y="4.5" Width="1.5" />
+  <Class Name="UnitInfoManager">
+    <Position X="5" Y="11.25" Width="3" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
       <HashCode>AAAAIAAAAAAAEBAAICAAABAAAAAEAAIAAAAUIMgAAAA=</HashCode>
       <FileName>C:\StarCraft AI\SassySpecter\src\UnitInfoManager.h</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="m_bot" />
+    </ShowAsAssociation>
   </Class>
-  <Class Name="UnitType" Collapsed="true">
-    <Position X="10.5" Y="4.5" Width="1.5" />
+  <Class Name="UnitType">
+    <Position X="18.75" Y="5.25" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
       <HashCode>QAAwIAEAAABpCgAAADAAASAUYKAlBAACQQAkAAAEAQk=</HashCode>
       <FileName>C:\StarCraft AI\SassySpecter\src\UnitType.h</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="m_type" />
+    </ShowAsAssociation>
   </Class>
-  <Class Name="WorkerData" Collapsed="true">
-    <Position X="12.25" Y="4.5" Width="1.5" />
+  <Class Name="WorkerData">
+    <Position X="4.75" Y="13.75" Width="3" />
+    <Members>
+      <Field Name="m_workerJobCount" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
       <HashCode>AAAAEAACEhCAAAAAEHAAEFIUAAACIIgAAAAAAgQAAAA=</HashCode>
       <FileName>C:\StarCraft AI\SassySpecter\src\WorkerData.h</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="m_bot" />
+    </ShowAsAssociation>
   </Class>
-  <Class Name="WorkerManager" Collapsed="true">
-    <Position X="14" Y="4.5" Width="1.5" />
+  <Class Name="WorkerManager">
+    <Position X="12.5" Y="5.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
       <HashCode>AAARAAAiAAAAAAAEAiBAABEAIQBIEgoAICIAgEgABAA=</HashCode>
       <FileName>C:\StarCraft AI\SassySpecter\src\WorkerManager.h</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="m_bot" />
+      <Field Name="m_previousClosestWorker" />
+    </ShowAsAssociation>
   </Class>
-  <Struct Name="BuildOrderItem" Collapsed="true">
-    <Position X="5.25" Y="5.75" Width="1.5" />
+  <Class Name="BWAPI::UnitType" Collapsed="true">
+    <Position X="18.75" Y="3.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>yAA4MAAIzwF0SkYCQZCAkSMwJiFyBAQDCQEYJBARAYE=</HashCode>
+      <FileName>C:\StarCraft AI\SC_APIs\BWAPI\include\BWAPI\UnitType.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BWAPI::TechType" Collapsed="true">
+    <Position X="6.5" Y="2.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEBAAABAAgAgAAAAQAAQAAAAEAAAAAAAAAACEQE=</HashCode>
+      <FileName>C:\StarCraft AI\SC_APIs\BWAPI\include\BWAPI\TechType.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="BuildOrderItem">
+    <Position X="18.75" Y="2.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAQAAAQAAAAAAAAAAAABAAAgAAAgAAAAAAA=</HashCode>
       <FileName>C:\StarCraft AI\SassySpecter\src\BuildOrderQueue.h</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="type" />
+    </ShowAsAssociation>
   </Struct>
-  <Struct Name="Strategy" Collapsed="true">
-    <Position X="7" Y="5.75" Width="1.5" />
+  <Struct Name="Strategy">
+    <Position X="18.75" Y="17.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
       <HashCode>EEAABBAAAAgAAAAAAAAAAAAAAAAAACAAQAAAABAAAAA=</HashCode>
       <FileName>C:\StarCraft AI\SassySpecter\src\StrategyManager.h</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="m_attackCondition" />
+      <Field Name="m_buildOrder" />
+      <Field Name="m_scoutCondition" />
+    </ShowAsAssociation>
   </Struct>
-  <Struct Name="TypeData" Collapsed="true">
-    <Position X="8.75" Y="5.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>ADAgAEEAAAAAAACAABAAAQAAJAACAAEiAQgCAAAAAAA=</HashCode>
-      <FileName>C:\StarCraft AI\SassySpecter\src\TechTree.h</FileName>
-    </TypeIdentifier>
-  </Struct>
-  <Struct Name="UnitInfo" Collapsed="true">
-    <Position X="10.5" Y="5.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAQgAAAIAAoAAAAAAAAAQAAAAABAAABAIAgAAAAAgA=</HashCode>
-      <FileName>C:\StarCraft AI\SassySpecter\src\UnitData.h</FileName>
-    </TypeIdentifier>
-  </Struct>
-  <Typedef Name="vvb" Collapsed="true">
-    <Position X="5.25" Y="10.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>C:\StarCraft AI\SassySpecter\src\MapTools.cpp</FileName>
-    </TypeIdentifier>
-  </Typedef>
-  <Typedef Name="vvi" Collapsed="true">
-    <Position X="8.75" Y="10.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>C:\StarCraft AI\SassySpecter\src\MapTools.cpp</FileName>
-    </TypeIdentifier>
-  </Typedef>
-  <Typedef Name="vvf" Collapsed="true">
-    <Position X="7" Y="10.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>C:\StarCraft AI\SassySpecter\src\MapTools.cpp</FileName>
-    </TypeIdentifier>
-  </Typedef>
-  <Typedef Name="CCPosition" Collapsed="true">
-    <Position X="10.5" Y="8.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>C:\StarCraft AI\SassySpecter\src\Common.h</FileName>
-    </TypeIdentifier>
-  </Typedef>
-  <Typedef Name="CCTilePosition" Collapsed="true">
-    <Position X="5.25" Y="9.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>C:\StarCraft AI\SassySpecter\src\Common.h</FileName>
-    </TypeIdentifier>
-  </Typedef>
-  <Typedef Name="CCColor" Collapsed="true">
-    <Position X="5.25" Y="8.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>C:\StarCraft AI\SassySpecter\src\Common.h</FileName>
-    </TypeIdentifier>
-  </Typedef>
-  <Typedef Name="CCUpgrade" Collapsed="true">
-    <Position X="8.75" Y="9.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>C:\StarCraft AI\SassySpecter\src\Common.h</FileName>
-    </TypeIdentifier>
-  </Typedef>
-  <Typedef Name="CCUnitID" Collapsed="true">
-    <Position X="7" Y="9.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>C:\StarCraft AI\SassySpecter\src\Common.h</FileName>
-    </TypeIdentifier>
-  </Typedef>
-  <Typedef Name="CCRace" Collapsed="true">
-    <Position X="14" Y="8.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>C:\StarCraft AI\SassySpecter\src\Common.h</FileName>
-    </TypeIdentifier>
-  </Typedef>
-  <Typedef Name="CCHealth" Collapsed="true">
-    <Position X="7" Y="8.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>C:\StarCraft AI\SassySpecter\src\Common.h</FileName>
-    </TypeIdentifier>
-  </Typedef>
-  <Typedef Name="CCPositionType" Collapsed="true">
-    <Position X="12.25" Y="8.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>C:\StarCraft AI\SassySpecter\src\Common.h</FileName>
-    </TypeIdentifier>
-  </Typedef>
-  <Typedef Name="CCPlayer" Collapsed="true">
-    <Position X="8.75" Y="8.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>C:\StarCraft AI\SassySpecter\src\Common.h</FileName>
-    </TypeIdentifier>
-  </Typedef>
-  <Typedef Name="UnitPair" Collapsed="true">
-    <Position X="12.25" Y="9.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>C:\StarCraft AI\SassySpecter\src\StrategyManager.h</FileName>
-    </TypeIdentifier>
-  </Typedef>
-  <Typedef Name="UnitPairVector" Collapsed="true">
-    <Position X="14" Y="9.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>C:\StarCraft AI\SassySpecter\src\StrategyManager.h</FileName>
-    </TypeIdentifier>
-  </Typedef>
-  <Typedef Name="UnitInfoVector" Collapsed="true">
-    <Position X="10.5" Y="9.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>C:\StarCraft AI\SassySpecter\src\UnitData.h</FileName>
-    </TypeIdentifier>
-  </Typedef>
-  <Enum Name="BuildingStatus::__unnamed_enum_000a_1" Collapsed="true">
-    <Position X="5.25" Y="7" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAACAAgAAAAAAAAAAAAAAAQAAAAAAAAAAAAgA=</HashCode>
-      <FileName>C:\StarCraft AI\SassySpecter\src\Building.h</FileName>
-    </TypeIdentifier>
-  </Enum>
-  <Enum Name="Players::__unnamed_enum_0019_1" Collapsed="true">
-    <Position X="7" Y="7" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAgAAAAAAgAAAAAABAAAAAAAAIAAAAAAAAAEAAAA=</HashCode>
-      <FileName>C:\StarCraft AI\SassySpecter\src\Common.h</FileName>
-    </TypeIdentifier>
-  </Enum>
-  <Enum Name="ConditionTypes::__unnamed_enum_001b_1" Collapsed="true">
-    <Position X="8.75" Y="7" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>CABAAAAAEAAAAAAIAAAAAIAAQAAAAAAAAAAAAAAAAIA=</HashCode>
-      <FileName>C:\StarCraft AI\SassySpecter\src\Condition.h</FileName>
-    </TypeIdentifier>
-  </Enum>
-  <Enum Name="ConditionOperators::__unnamed_enum_001b_2" Collapsed="true">
-    <Position X="10.5" Y="7" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>DAIAAAAAEAAAKAAAABAAAAAAAAkIAAAAAAAAEAAAAAA=</HashCode>
-      <FileName>C:\StarCraft AI\SassySpecter\src\Condition.h</FileName>
-    </TypeIdentifier>
-  </Enum>
-  <Enum Name="MetaTypes::__unnamed_enum_0028_1" Collapsed="true">
-    <Position X="12.25" Y="7" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAggAAIAAgAAAAAAAAAAAAgAAAAAEAAAA=</HashCode>
-      <FileName>C:\StarCraft AI\SassySpecter\src\MetaType.h</FileName>
-    </TypeIdentifier>
-  </Enum>
-  <Enum Name="SquadOrderTypes::__unnamed_enum_0036_1" Collapsed="true">
-    <Position X="14" Y="7" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAABAAAARAAAAAAAAAAAAAIAAAAAAAAAAAAEAQAA=</HashCode>
-      <FileName>C:\StarCraft AI\SassySpecter\src\SquadOrder.h</FileName>
-    </TypeIdentifier>
-  </Enum>
-  <Enum Name="WorkerJobs::__unnamed_enum_0047_1" Collapsed="true">
-    <Position X="5.25" Y="7.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>IAAAAABAQIAAAAAAAAAAAAAAACAAgAAACAAAAAUAAAA=</HashCode>
-      <FileName>C:\StarCraft AI\SassySpecter\src\WorkerData.h</FileName>
-    </TypeIdentifier>
-  </Enum>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
