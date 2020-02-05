@@ -125,6 +125,7 @@ void MicroManager::regroup(const CCPosition & regroupPosition) const
 
         int unitDistanceFromBase = m_bot.Map().getGroundDistance(unit.getPosition(), ourBasePosition);
 
+        // TODO: remove the following if?
         // if the unit is outside the regroup area
         if (unitDistanceFromBase > regroupDistanceFromBase)
         {

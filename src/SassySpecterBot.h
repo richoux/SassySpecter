@@ -30,7 +30,9 @@ class SassySpecterBot
     GameCommander           m_gameCommander;
 
     std::vector<Unit>       m_allUnits;
+    // TODO: move m_baseLocations and mainBaseIndex to BaseLocationManager?
     std::vector<CCPosition> m_baseLocations;
+    int                     mainBaseIndex;
 
     void setUnits();
 
@@ -63,6 +65,7 @@ public:
     const TypeData & Data(const Unit & unit) const;
     CCRace GetPlayerRace(int player) const;
     CCPosition GetStartLocation() const;
+    CCPosition GetMainBaseLocation() const;
 
     int GetCurrentFrame() const;
     int GetMinerals() const;

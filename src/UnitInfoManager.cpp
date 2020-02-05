@@ -18,6 +18,7 @@ void UnitInfoManager::onStart()
 
 void UnitInfoManager::onFrame()
 {
+    // TODO: clear/fill policy on each frame is too brute-force
     updateUnitInfo();
     drawUnitInformation(100, 100);
     drawSelectedUnitDebugInfo();
@@ -36,6 +37,7 @@ void UnitInfoManager::updateUnitInfo()
     }
 
     // remove bad enemy units
+    // TODO: What is a bad unit?
     m_unitData[Players::Self].removeBadUnits();
     m_unitData[Players::Enemy].removeBadUnits();
     m_unitData[Players::Neutral].removeBadUnits();
@@ -252,6 +254,7 @@ bool UnitInfoManager::isValidUnit(const Unit & unit)
     return true;
 }
 
+// TODO: What is it?
 void UnitInfoManager::getNearbyForce(std::vector<UnitInfo> & unitInfo, CCPosition p, int player, float radius) const
 {
     bool hasBunker = false;

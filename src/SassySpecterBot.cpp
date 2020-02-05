@@ -30,6 +30,13 @@ void SassySpecterBot::OnGameStart()
         m_baseLocations.push_back(BWAPI::Position(loc));
     }
 
+    for( int = 0; i < (int)m_baseLocations.size() ; ++i )
+      if (m_baseLocations[i] == GetStartLocation())
+      {
+        mainBaseIndex = i;
+        break;
+      }
+
     // set the BWAPI game flags
     BWAPI::Broodwar->setLocalSpeed(m_config.SetLocalSpeed);
     BWAPI::Broodwar->setFrameSkip(m_config.SetFrameSkip);
@@ -231,6 +238,11 @@ CCPosition SassySpecterBot::GetStartLocation() const
 #else
     return BWAPI::Position(BWAPI::Broodwar->self()->getStartLocation());
 #endif
+}
+
+CCPosition SassySpecterBot::GetMainBaseLocation() const
+{
+  return m_baseLocations[ mainBaseIndex ]; 
 }
 
 const std::vector<CCPosition> & SassySpecterBot::GetStartLocations() const
