@@ -113,7 +113,7 @@ void CombatCommander::updateScoutDefenseSquad()
     // if the current squad has units in it then we can ignore this
     Squad & scoutDefenseSquad = m_squadData.getSquad("ScoutDefense");
 
-    // get the region that our base is located in
+    // get the region that our main base is located in
     const BaseLocation * myBaseLocation = m_bot.Bases().getPlayerStartingBaseLocation(Players::Self);
     BOT_ASSERT(myBaseLocation, "null self base location");
 
@@ -195,6 +195,7 @@ void CombatCommander::updateDefenseSquads()
         for (auto & unit : m_bot.UnitInfo().getUnits(Players::Enemy))
         {
             // if it's an overlord, don't worry about it for defense, we don't care what they see
+            // TODO: test if ventral sacs has been researched first?
             if (unit.getType().isOverlord())
             {
                 continue;
