@@ -52,6 +52,8 @@ void GameCommander::handleUnitAssignments()
     m_validUnits.clear();
     m_combatUnits.clear();
 
+    // TODO: a bit brutal to clear/fill these vectors at each frame
+
     // filter our units for those which are valid and usable
     setValidUnits();
 

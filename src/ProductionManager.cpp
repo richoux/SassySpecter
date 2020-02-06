@@ -164,6 +164,7 @@ Unit ProductionManager::getProducer(const MetaType & type, CCPosition closestTo)
         if (std::find(producerTypes.begin(), producerTypes.end(), unit.getType()) == producerTypes.end()) { continue; }
         if (!unit.isCompleted()) { continue; }
         if (m_bot.Data(unit).isBuilding && unit.isTraining()) { continue; }
+        // TODO: a flying unit can morph itself
         if (unit.isFlying()) { continue; }
 
         // TODO: if unit is not powered continue

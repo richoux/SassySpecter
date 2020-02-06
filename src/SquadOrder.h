@@ -8,6 +8,7 @@ namespace SquadOrderTypes
     enum { None, Idle, Attack, Defend, Regroup, Drop, SquadOrderTypes };
 }
 
+//TODO: Use BWAPI::Region instead of radius?
 class SquadOrder
 {
     size_t          m_type;

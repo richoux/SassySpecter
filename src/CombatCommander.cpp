@@ -4,8 +4,8 @@
 
 const size_t IdlePriority = 0;
 const size_t AttackPriority = 1;
-const size_t BaseDefensePriority = 2;
-const size_t ScoutDefensePriority = 3;
+const size_t ScoutDefensePriority = 2;
+const size_t BaseDefensePriority = 3;
 const size_t DropPriority = 4;
 
 CombatCommander::CombatCommander(SassySpecterBot & bot)
@@ -257,6 +257,7 @@ void CombatCommander::updateDefenseSquads()
             // if we don't have a squad assigned to this region already, create one
             if (!m_squadData.squadExists(squadName.str()))
             {
+                //TODO: What if no units or too few units are in the range 32*25?
                 SquadOrder defendRegion(SquadOrderTypes::Defend, basePosition, 32 * 25, "Defend Region!");
                 m_squadData.addSquad(squadName.str(), Squad(squadName.str(), defendRegion, BaseDefensePriority, m_bot));
             }
@@ -322,16 +323,16 @@ void CombatCommander::updateDefenseSquadUnits(Squad & defenseSquad, const size_t
     }
 
     size_t defendersNeeded = flyingDefendersNeeded + groundDefendersNeeded;
-    size_t defendersAdded = 0;
+    size_t numberDefenders = squadUnits.size();
 
-    while (defendersNeeded > defendersAdded)
+    while (defendersNeeded < numberDefenders)
     {
         Unit defenderToAdd = findClosestDefender(defenseSquad, defenseSquad.getSquadOrder().getPosition());
 
         if (defenderToAdd.isValid())
         {
             m_squadData.assignUnitToSquad(defenderToAdd, defenseSquad);
-            defendersAdded++;
+            numberDefenders++;
         }
         else
         {
@@ -357,7 +358,7 @@ Unit CombatCommander::findClosestDefender(const Squad & defenseSquad, const CCPo
         }
 
         float dist = Util::Dist(unit, pos);
-        if (!closestDefender.isValid() || (dist < minDistance))
+        if (dist < minDistance)
         {
             closestDefender = unit;
             minDistance = dist;

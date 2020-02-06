@@ -10,18 +10,18 @@ class SassySpecterBot;
 
 class GameCommander
 {
-    SassySpecterBot &                 m_bot;
-    Timer                   m_timer;
+    SassySpecterBot &    m_bot;
+    Timer                m_timer;
 
-    ProductionManager       m_productionManager;
-    ScoutManager            m_scoutManager;
-    CombatCommander         m_combatCommander;
+    ProductionManager    m_productionManager;
+    ScoutManager         m_scoutManager;
+    CombatCommander      m_combatCommander;
 
     std::vector<Unit>    m_validUnits;
     std::vector<Unit>    m_combatUnits;
     std::vector<Unit>    m_scoutUnits;
 
-    bool                    m_initialScoutSet;
+    bool                 m_initialScoutSet;
 
     void assignUnit(const Unit & unit, std::vector<Unit> & units);
     bool isAssigned(const Unit & unit) const;
