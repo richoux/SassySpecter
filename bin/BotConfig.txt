@@ -3,7 +3,7 @@
     {
         "BotName"                   : "SassySpecter",
         "Authors"                   : "Florian Richoux",
-        "PrintInfoOnStart"          : false
+        "PrintInfoOnStart"          : true
     },
 
     "BWAPI" : 
@@ -32,7 +32,7 @@
     "Macro" :
     {
         "WorkersPerRefinery"        : 3,
-        "BuildingSpacing"           : 0,
+        "BuildingSpacing"           : 2,
         "PylonSpacing"              : 3
     },
 
@@ -40,18 +40,18 @@
     {
         "DrawGameInfo"              : true, 
         "DrawProductionInfo"        : true, 
-        "DrawBaseLocationInfo"      : true,
+        "DrawBaseLocationInfo"      : false,
         "DrawTileInfo"              : false,
         "DrawWalkableSectors"       : false,
         "DrawScoutInfo"             : false,
         "DrawEnemyUnitInfo"         : false,
         "DrawResourceInfo"          : false,
-        "DrawUnitTargetInfo"        : false,
+        "DrawUnitTargetInfo"        : true,
         "DrawLastSeenTileInfo"      : false,
         "DrawSquadInfo"             : false,
-        "DrawWorkerInfo"            : false,
-        "DrawBuildingInfo"          : false,
-        "DrawReservedBuildingTiles" : false
+        "DrawWorkerInfo"            : true,
+        "DrawBuildingInfo"          : true,
+        "DrawReservedBuildingTiles" : true
     },
     
     "Modules" :

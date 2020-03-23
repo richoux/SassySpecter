@@ -388,6 +388,7 @@ void BuildingManager::drawBuildingInformation()
         else if (b.status == BuildingStatus::Assigned)
         {
             ss << "Assigned " << b.type.getName() << "    " << b.builderUnit.getID() << " " << getBuildingWorkerCode(b) << " (" << b.finalPosition.x << "," << b.finalPosition.y << ")\n";
+            ss << b.builderUnit.getID() << " is idle: " << b.builderUnit.isIdle() << ", is constructing: " << b.builderUnit.isConstructing( b.type ) << "\n";
 
             int x1 = b.finalPosition.x;
             int y1 = b.finalPosition.y;

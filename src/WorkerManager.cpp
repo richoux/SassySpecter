@@ -70,11 +70,11 @@ void WorkerManager::handleIdleWorkers()
     {
         if (!worker.isValid()) { continue; }
 
-        bool isIdle = worker.isIdle();
+        auto worker_job = m_workerData.getWorkerJob(worker);
         if (worker.isIdle() && 
-            (m_workerData.getWorkerJob(worker) != WorkerJobs::Build) && 
-            (m_workerData.getWorkerJob(worker) != WorkerJobs::Move) &&
-            (m_workerData.getWorkerJob(worker) != WorkerJobs::Scout)) 
+            (worker_job != WorkerJobs::Build) &&
+            (worker_job != WorkerJobs::Move) &&
+            (worker_job != WorkerJobs::Scout))
         {
             m_workerData.setWorkerJob(worker, WorkerJobs::Idle);
         }
@@ -241,7 +241,7 @@ void WorkerManager::drawWorkerInformation()
 
     for (auto & worker : m_workerData.getWorkers())
     {
-        ss << m_workerData.getJobCode(worker) << " " << worker.getID() << "\n";
+        ss << m_workerData.getJobCode(worker) << " " << worker.getID() << " " << worker.isIdle() << "\n";
 
         m_bot.Map().drawText(worker.getPosition(), m_workerData.getJobCode(worker));
     }
