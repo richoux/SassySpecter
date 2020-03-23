@@ -7,6 +7,7 @@ cmake_install.cmake
 # IDEs
 .vscode/
 vs/.vs/
+vs/SassySpecter.vcxproj
 vs/sassyspecter
 *~
 
