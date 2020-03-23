@@ -30,7 +30,7 @@ void SassySpecterBot::OnGameStart()
         m_baseLocations.push_back(BWAPI::Position(loc));
     }
 
-    for( int = 0; i < (int)m_baseLocations.size() ; ++i )
+    for( int i = 0; i < (int)m_baseLocations.size() ; ++i )
       if (m_baseLocations[i] == GetStartLocation())
       {
         mainBaseIndex = i;

@@ -173,12 +173,12 @@
     <OutDir>$(ProjectDir)/../bin/</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <LibraryPath>C:\StarCraft AI\SC_APIs\SC2API_Binary_vs2017\lib;$(LibraryPath)</LibraryPath>
-    <IncludePath>C:\StarCraft AI\SC_APIs\SC2API_Binary_vs2017\include;$(IncludePath)</IncludePath>
+    <LibraryPath>H:\Developpement\StarCraft2_AI\SC2API_Binary_vs2017\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>H:\Developpement\StarCraft2_AI\SC2API_Binary_vs2017\include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <LibraryPath>C:\StarCraft AI\SC_APIs\BWAPI\Release;$(LibraryPath)</LibraryPath>
-    <IncludePath>C:\StarCraft AI\SC_APIs\BWAPI\include;$(IncludePath)</IncludePath>
+    <LibraryPath>H:\Developpement\StarCraft_IA\BWAPI_4\Release;$(LibraryPath)</LibraryPath>
+    <IncludePath>H:\Developpement\StarCraft_IA\BWAPI_4\include;$(IncludePath)</IncludePath>
     <OutDir>$(ProjectDir)/../bin/</OutDir>
     <IntDir>$(SolutionName)\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
