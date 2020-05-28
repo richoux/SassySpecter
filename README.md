@@ -9,7 +9,7 @@
 SassySpecter is a fork of [CommandCenter](https://github.com/davechurchill/commandcenter).
 The  goal is  to have  a  bot able  to play  the  3 races  from the  2
 StarCraft games,  with the same  code (modulo API-specific  parts), by
-using   massively   the    Constraint   Programmaing   toolkit   [GHOST](https://github.com/richoux/GHOST) for decision-making. 
+using   massively   the    Constraint   Programmaing   toolkit   [GHOST](https://github.com/richoux/GHOST) for decision-making.
 
 ## Kickstarter: where to get SC1&2 and their APIs?
 
@@ -17,11 +17,10 @@ using   massively   the    Constraint   Programmaing   toolkit   [GHOST](https:/
 <!-- * You need StarCraft : Brood War version 1.16.1. You won't be able to have it through Battle.net now. You can download the [right version provided by ICCup](http://files.theabyss.ru/sc/starcraft.zip) (chill out, everything is legal here). -->
 * You need StarCraft : Brood War version 1.16.1. You won't be able to have it through Battle.net now. You can download the [right version provided by ICCup](https://www.richoux.fr/files/starcraft.zip) (chill out, everything is legal here).
 * You can download [StarCraft II](https://www.blizzard.com/en-us/download/confirmation?platform=windows&locale=en_US&version=LIVE&id=sc2) for free.
-  
+
 ### APIs
 * SassySpecter uses [BWAPI v4.4.0](https://github.com/bwapi/bwapi/releases/tag/v4.4.0). You will need to **build both BWAPILIB and BWAPIClient projects** from BWAPI.
-* [Precompiled libs](http://blzdistsc2-a.akamaihd.net/SC2API_Binary_vs2017.zip) for
-  SC2 API is a nice option.
+* SassySpecter uses Alexander Kurbatov's [SC2API](https://github.com/alkurbatov/cpp-sc2). **Do not** use the SC2 API from Blizzard.
 
 
 ## Developer Install / Compile Instructions (Windows)
@@ -33,18 +32,9 @@ using   massively   the    Constraint   Programmaing   toolkit   [GHOST](https:/
 * Open "SassySpecter/vs/SassySpecter.sln" in VS
 * If you compile the SassySpecter project with the x64 Platform, it will compile the SC2 bot
 * If you compile the SassySpecter project with the x86 or Win32 Platform, it will compile the BW bot
-* Set the VS Project include and lib folders to point to the directories
-  * Right click the SassySpecter project in VS
-  * Select "Properties"
-  * Select the correct configuration that you want to build in the top left ("Release" or "Debug")
-  * Select the target platform you want to build (x64 = SC2, Win32 = BW)
-  * Select "VC++ Directories" on the left
-  * Select the "Include Directories" option in the table on the right
-  * Click the dropdown arrow on the right and click Edit...
-  * Modify the existing directory entry to point to your (SC2API|BWAPI)/include directory
-  * Select the "Library Directories" option in the table on the right
-  * Click the dropdown arrow on the right and click Edit...
-  * Modify the existing directory entry to point to your (SC2API|BWAPI)/lib directory
+* Set environment variables to point to include and lib directories
+  * Right click on your computer icon > Properties > Advanced system settings > Advanced > Environment Variables > New
+  * Name two variables 'BWAPI_DIR' and 'SC2API_DIR', and set their value to be the path of your BWAPI and SC2API folders
 * From the "Build" menu, click "Build Solution"
 * The binary "SassySpecter_{SC1/SC2}.exe" should appear in the SassySpecter/bin/ directory
 * Run the SassySpecter bot by either:
@@ -64,7 +54,7 @@ Broodwar and StarCraft 2 written by David Churchill (https://github.com/davechur
 
 CommandCenter is written in C++ using [BWAPI](https://github.com/bwapi/bwapi) and Blizzard's [StarCraft II AI API](https://github.com/Blizzard/s2client-api). It provides many wrapper functions around both APIs that allow it to perform the same functionality in both games via the same source code. It is written by [David Churchill](http://www.cs.mun.ca/~dchurchill/), Assistant Professor of [Computer Science](https://www.cs.mun.ca/) at Memorial University, and organizer of the [AIIDE StarCraft AI Competition](http://www.cs.mun.ca/~dchurchill/starcraftaicomp/).
 
-CommandCenter is based on the architecture of [UAlbertaBot](https://github.com/davechurchill/ualbertabot/wiki), and is intended to be an easy to use architecture for you to quickly modify, play with, and build your own bot. The bot itself does not contain much in the way of hard-coded strategy or tactics, however it provides a good starting point for you to implement your own strategies for any race. 
+CommandCenter is based on the architecture of [UAlbertaBot](https://github.com/davechurchill/ualbertabot/wiki), and is intended to be an easy to use architecture for you to quickly modify, play with, and build your own bot. The bot itself does not contain much in the way of hard-coded strategy or tactics, however it provides a good starting point for you to implement your own strategies for any race.
 
 CommandCenter currently provides the following features:
 * Plays both Starcraft games with the same source code
@@ -74,7 +64,7 @@ CommandCenter currently provides the following features:
 * Has a WorkerManager which manages resource gathering and worker allocation / buiding
 * Is able to carry out predefined build-orders written in a configuration file
 * Allows you to easily create your own build-orders and modify them on the fly in-game
-* Contains a building placement algorithm, finding the closest buildable location to a given position for a given building 
+* Contains a building placement algorithm, finding the closest buildable location to a given position for a given building
 * Scouts the map with a worker unit, discovering where the enemy base is located
 * Once a specific condition has been reached (having 12 combat units, by default), it will commence an attack, sending waves of units at the enemy base
 * Squads can be formed, consisting of multiple units following a specific order such as attack or defend a given location
