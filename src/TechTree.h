@@ -48,4 +48,47 @@ public:
     const TypeData & getData(const UnitType & type) const;
     const TypeData & getData(const CCUpgrade & type) const;
     const TypeData & getData(const MetaType & type) const;
+
+    inline bool is_building( const sc2::UnitTypeData& type ) const { return std::find( type.attributes.begin(), type.attributes.end(), sc2::Attribute::Structure ) != type.attributes.end(); }
+    inline bool is_worker(const sc2::UnitTypeData& type) const 
+    { 
+      return ( type.unit_type_id == sc2::UNIT_TYPEID::TERRAN_SCV 
+        || type.unit_type_id == sc2::UNIT_TYPEID::PROTOSS_PROBE 
+        || type.unit_type_id == sc2::UNIT_TYPEID::ZERG_DRONE ); 
+    }
+    
+    inline bool is_refinery( const sc2::UnitTypeData& type ) const 
+    {
+      return ( type.unit_type_id == sc2::UNIT_TYPEID::TERRAN_REFINERY || type.unit_type_id == sc2::UNIT_TYPEID::TERRAN_REFINERYRICH
+        || type.unit_type_id == sc2::UNIT_TYPEID::PROTOSS_ASSIMILATOR || type.unit_type_id == sc2::UNIT_TYPEID::PROTOSS_ASSIMILATORRICH
+        || type.unit_type_id == sc2::UNIT_TYPEID::ZERG_EXTRACTOR || type.unit_type_id == sc2::UNIT_TYPEID::ZERG_EXTRACTORRICH );
+     }
+
+    inline bool is_resource_depot( const sc2::UnitTypeData& type ) const
+    {
+      return ( type.unit_type_id == sc2::UNIT_TYPEID::TERRAN_COMMANDCENTER || type.unit_type_id == sc2::UNIT_TYPEID::TERRAN_COMMANDCENTERFLYING
+        || type.unit_type_id == sc2::UNIT_TYPEID::PROTOSS_NEXUS
+        || type.unit_type_id == sc2::UNIT_TYPEID::ZERG_HATCHERY || type.unit_type_id == sc2::UNIT_TYPEID::ZERG_LAIR || type.unit_type_id == sc2::UNIT_TYPEID::ZERG_HIVE );
+    }
+
+    inline sc2::AbilityID what_ability_to_be_warped( const sc2::UnitTypeData& type ) const
+    {
+      switch( type.unit_type_id.ToType )
+      {
+      case sc2::UNIT_TYPEID::PROTOSS_ZEALOT:
+        return sc2::ABILITY_ID::TRAINWARP_ZEALOT;
+      case sc2::UNIT_TYPEID::PROTOSS_SENTRY:
+        return sc2::ABILITY_ID::TRAINWARP_SENTRY;
+      case sc2::UNIT_TYPEID::PROTOSS_STALKER:
+        return sc2::ABILITY_ID::TRAINWARP_STALKER;
+      case sc2::UNIT_TYPEID::PROTOSS_HIGHTEMPLAR:
+        return sc2::ABILITY_ID::TRAINWARP_HIGHTEMPLAR;
+      case sc2::UNIT_TYPEID::PROTOSS_DARKTEMPLAR:
+        return sc2::ABILITY_ID::TRAINWARP_DARKTEMPLAR;
+      case sc2::UNIT_TYPEID::PROTOSS_ADEPT:
+        return sc2::ABILITY_ID::TRAINWARP_ADEPT;
+      default:
+        return 0;
+      }
+    }
 };

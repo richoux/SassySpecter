@@ -21,8 +21,9 @@ void TechTree::onStart()
 #ifdef SC2API
 void TechTree::initUnitTypeData()
 {
+    /*  
     m_unitTypeData[UnitType(0, m_bot)] = TypeData();
-
+ 
     // Protoss Buildings                                                                                  unit  bld   wrk    rfn    sup    hall   add
     m_unitTypeData[UnitType(sc2::UNIT_TYPEID::PROTOSS_PYLONOVERCHARGED, m_bot)] =        { sc2::Race::Protoss, 0, 0, 0, 0, true, true, false, false,  true, false, false, sc2::ABILITY_ID::EFFECT_PHOTONOVERCHARGE, 0, { UnitType(sc2::UNIT_TYPEID::PROTOSS_MOTHERSHIPCORE, m_bot), UnitType(sc2::UNIT_TYPEID::PROTOSS_PYLON, m_bot) }, {}, {} }; 
     m_unitTypeData[UnitType(sc2::UNIT_TYPEID::PROTOSS_PYLON, m_bot)] =                   { sc2::Race::Protoss, 0, 0, 0, 0, true, true, false, false,  true, false, false, sc2::ABILITY_ID::BUILD_PYLON, 0, { UnitType(sc2::UNIT_TYPEID::PROTOSS_PROBE, m_bot) }, {}, {} }; 
@@ -43,12 +44,13 @@ void TechTree::initUnitTypeData()
 
     // Protoss Units                                                                                      unit  bld   wrk    rfn    sup    hall   add
     m_unitTypeData[UnitType(sc2::UNIT_TYPEID::PROTOSS_PROBE, m_bot)] =                   { sc2::Race::Protoss, 0, 0, 1, 0, true, false,  true, false, false, false, false, sc2::ABILITY_ID::TRAIN_PROBE, 0, { UnitType(sc2::UNIT_TYPEID::PROTOSS_NEXUS, m_bot) }, {}, {} }; 
-    m_unitTypeData[UnitType(sc2::UNIT_TYPEID::PROTOSS_MOTHERSHIPCORE, m_bot)] =          { sc2::Race::Protoss, 0, 0, 2, 0, true, false, false, false, false, false, false, sc2::ABILITY_ID::TRAIN_MOTHERSHIPCORE, 0, { UnitType(sc2::UNIT_TYPEID::PROTOSS_NEXUS, m_bot) }, {}, {} }; 
+    m_unitTypeData[UnitType(sc2::UNIT_TYPEID::PROTOSS_MOTHERSHIP, m_bot)] =              { sc2::Race::Protoss, 0, 0, 8, 0, true, false, false, false, false, false, false, sc2::ABILITY_ID::TRAIN_MOTHERSHIP, 0, { UnitType(sc2::UNIT_TYPEID::PROTOSS_NEXUS, m_bot) }, { UnitType(sc2::UNIT_TYPEID::PROTOSS_FLEETBEACON, m_bot) }, {} };
     m_unitTypeData[UnitType(sc2::UNIT_TYPEID::PROTOSS_ZEALOT, m_bot)] =                  { sc2::Race::Protoss, 0, 0, 2, 0, true, false, false, false, false, false, false, sc2::ABILITY_ID::TRAIN_ZEALOT, sc2::ABILITY_ID::TRAINWARP_ZEALOT, { UnitType(sc2::UNIT_TYPEID::PROTOSS_GATEWAY, m_bot) }, {}, {} }; 
     m_unitTypeData[UnitType(sc2::UNIT_TYPEID::PROTOSS_SENTRY, m_bot)] =                  { sc2::Race::Protoss, 0, 0, 2, 0, true, false, false, false, false, false, false, sc2::ABILITY_ID::TRAIN_SENTRY, sc2::ABILITY_ID::TRAINWARP_SENTRY, { UnitType(sc2::UNIT_TYPEID::PROTOSS_GATEWAY, m_bot) }, { UnitType(sc2::UNIT_TYPEID::PROTOSS_CYBERNETICSCORE, m_bot) }, {} };
     m_unitTypeData[UnitType(sc2::UNIT_TYPEID::PROTOSS_STALKER, m_bot)] =                 { sc2::Race::Protoss, 0, 0, 2, 0, true, false, false, false, false, false, false, sc2::ABILITY_ID::TRAIN_STALKER, sc2::ABILITY_ID::TRAINWARP_STALKER, { UnitType(sc2::UNIT_TYPEID::PROTOSS_GATEWAY, m_bot) }, { UnitType(sc2::UNIT_TYPEID::PROTOSS_CYBERNETICSCORE, m_bot) }, {} };
     m_unitTypeData[UnitType(sc2::UNIT_TYPEID::PROTOSS_HIGHTEMPLAR, m_bot)] =             { sc2::Race::Protoss, 0, 0, 2, 0, true, false, false, false, false, false, false, sc2::ABILITY_ID::TRAIN_HIGHTEMPLAR, sc2::ABILITY_ID::TRAINWARP_HIGHTEMPLAR, { UnitType(sc2::UNIT_TYPEID::PROTOSS_GATEWAY, m_bot) }, { UnitType(sc2::UNIT_TYPEID::PROTOSS_TEMPLARARCHIVE, m_bot) }, {} };
     m_unitTypeData[UnitType(sc2::UNIT_TYPEID::PROTOSS_DARKTEMPLAR, m_bot)] =             { sc2::Race::Protoss, 0, 0, 2, 0, true, false, false, false, false, false, false, sc2::ABILITY_ID::TRAIN_DARKTEMPLAR, sc2::ABILITY_ID::TRAINWARP_DARKTEMPLAR, { UnitType(sc2::UNIT_TYPEID::PROTOSS_GATEWAY, m_bot) }, { UnitType(sc2::UNIT_TYPEID::PROTOSS_DARKSHRINE, m_bot) }, {} };
+    m_unitTypeData[UnitType(sc2::UNIT_TYPEID::PROTOSS_ARCHON, m_bot)] =                  { sc2::Race::Protoss, 0, 0, 4, 0, true, false, false, false, false, false, false, sc2::ABILITY_ID::MORPH_ARCHON, 0, { UnitType(sc2::UNIT_TYPEID::PROTOSS_HIGHTEMPLAR, m_bot), UnitType(sc2::UNIT_TYPEID::PROTOSS_DARKTEMPLAR, m_bot) }, { UnitType(sc2::UNIT_TYPEID::PROTOSS_TEMPLARARCHIVE, m_bot) }, {} };
     m_unitTypeData[UnitType(sc2::UNIT_TYPEID::PROTOSS_ADEPT, m_bot)] =                   { sc2::Race::Protoss, 0, 0, 2, 0, true, false, false, false, false, false, false, sc2::ABILITY_ID::TRAIN_ADEPT, sc2::ABILITY_ID::TRAINWARP_ADEPT, { UnitType(sc2::UNIT_TYPEID::PROTOSS_GATEWAY, m_bot) }, { UnitType(sc2::UNIT_TYPEID::PROTOSS_CYBERNETICSCORE, m_bot) }, {} };
     m_unitTypeData[UnitType(sc2::UNIT_TYPEID::PROTOSS_COLOSSUS, m_bot)] =                { sc2::Race::Protoss, 0, 0, 6, 0, true, false, false, false, false, false, false, sc2::ABILITY_ID::TRAIN_COLOSSUS,  0, { UnitType(sc2::UNIT_TYPEID::PROTOSS_ROBOTICSFACILITY, m_bot) }, { UnitType(sc2::UNIT_TYPEID::PROTOSS_ROBOTICSBAY, m_bot) }, {} };
     m_unitTypeData[UnitType(sc2::UNIT_TYPEID::PROTOSS_DISRUPTOR, m_bot)] =               { sc2::Race::Protoss, 0, 0, 3, 0, true, false, false, false, false, false, false, sc2::ABILITY_ID::TRAIN_DISRUPTOR, 0, { UnitType(sc2::UNIT_TYPEID::PROTOSS_ROBOTICSFACILITY, m_bot) }, { UnitType(sc2::UNIT_TYPEID::PROTOSS_ROBOTICSBAY, m_bot) }, {} };
@@ -115,6 +117,8 @@ void TechTree::initUnitTypeData()
     m_unitTypeData[UnitType(sc2::UNIT_TYPEID::TERRAN_RAVEN, m_bot)] =                    { sc2::Race::Terran, 0, 0, 2, 0, true, false, false, false, false, false, false, sc2::ABILITY_ID::TRAIN_RAVEN, 0, { UnitType(sc2::UNIT_TYPEID::TERRAN_STARPORT, m_bot) }, { UnitType(sc2::UNIT_TYPEID::TERRAN_TECHLAB, m_bot), UnitType(sc2::UNIT_TYPEID::TERRAN_BARRACKSTECHLAB, m_bot), UnitType(sc2::UNIT_TYPEID::TERRAN_FACTORYTECHLAB, m_bot), UnitType(sc2::UNIT_TYPEID::TERRAN_STARPORTTECHLAB, m_bot) }, {} };
     m_unitTypeData[UnitType(sc2::UNIT_TYPEID::TERRAN_MEDIVAC, m_bot)] =                  { sc2::Race::Terran, 0, 0, 2, 0, true, false, false, false, false, false, false, sc2::ABILITY_ID::TRAIN_MEDIVAC, 0, { UnitType(sc2::UNIT_TYPEID::TERRAN_STARPORT, m_bot) }, {}, {} };
     m_unitTypeData[UnitType(sc2::UNIT_TYPEID::TERRAN_MULE, m_bot)] =                     { sc2::Race::Terran, 0, 0, 0, 0, true, false, false, false, false, false, false, sc2::ABILITY_ID::EFFECT_CALLDOWNMULE, 0, { UnitType(sc2::UNIT_TYPEID::TERRAN_ORBITALCOMMAND, m_bot) }, {}, {} }; 
+    // Hellbat, thor transformation, viking transformation, tank transformation, widowmine burrowed, auto-turret
+
 
     // Zerg Buildings                                                                      m  g  s  t  unit  bld   wrk    rfn    sup    hall   add
     m_unitTypeData[UnitType(sc2::UNIT_TYPEID::ZERG_HATCHERY, m_bot)] =                   { sc2::Race::Zerg, 0, 0, 0, 0, true, true, false, false, false,  true, false, sc2::ABILITY_ID::BUILD_HATCHERY, 0, { UnitType(sc2::UNIT_TYPEID::ZERG_DRONE, m_bot) }, {}, {} }; 
@@ -134,6 +138,8 @@ void TechTree::initUnitTypeData()
     m_unitTypeData[UnitType(sc2::UNIT_TYPEID::ZERG_ULTRALISKCAVERN, m_bot)] =            { sc2::Race::Zerg, 0, 0, 0, 0, true, true, false, false, false, false, false, sc2::ABILITY_ID::BUILD_ULTRALISKCAVERN, 0, { UnitType(sc2::UNIT_TYPEID::ZERG_DRONE, m_bot) }, { UnitType(sc2::UNIT_TYPEID::ZERG_HIVE, m_bot) }, {} };
     m_unitTypeData[UnitType(sc2::UNIT_TYPEID::ZERG_LAIR, m_bot)] =                       { sc2::Race::Zerg, 0, 0, 0, 0, true, true, false, false, false,  true, false, sc2::ABILITY_ID::MORPH_LAIR, 0, { UnitType(sc2::UNIT_TYPEID::ZERG_HATCHERY, m_bot) }, {UnitType(sc2::UNIT_TYPEID::ZERG_SPAWNINGPOOL, m_bot)}, {} };
     m_unitTypeData[UnitType(sc2::UNIT_TYPEID::ZERG_HIVE, m_bot)] =                       { sc2::Race::Zerg, 0, 0, 0, 0, true, true, false, false, false,  true, false, sc2::ABILITY_ID::MORPH_HIVE, 0, { UnitType(sc2::UNIT_TYPEID::ZERG_LAIR, m_bot) }, { UnitType(sc2::UNIT_TYPEID::ZERG_INFESTATIONPIT, m_bot) }, {} };  
+    // lurker den
+
 
     // Zerg Units                                                                          m  g  s  t  unit  bld    wrk    rfn    sup    hall   add
     m_unitTypeData[UnitType(sc2::UNIT_TYPEID::ZERG_OVERLORD, m_bot)] =                   { sc2::Race::Zerg, 0, 0, 0, 0, true, false, false, false,  true, false, false, sc2::ABILITY_ID::TRAIN_OVERLORD, 0, { UnitType(sc2::UNIT_TYPEID::ZERG_LARVA, m_bot) }, {}, {} }; 
@@ -151,6 +157,8 @@ void TechTree::initUnitTypeData()
     m_unitTypeData[UnitType(sc2::UNIT_TYPEID::ZERG_QUEEN, m_bot)] =                      { sc2::Race::Zerg, 0, 0, 2, 0, true, false, false, false, false, false, false, sc2::ABILITY_ID::TRAIN_QUEEN, 0, { UnitType(sc2::UNIT_TYPEID::ZERG_HATCHERY, m_bot), UnitType(sc2::UNIT_TYPEID::ZERG_LAIR, m_bot), UnitType(sc2::UNIT_TYPEID::ZERG_HIVE, m_bot) }, { UnitType(sc2::UNIT_TYPEID::ZERG_SPAWNINGPOOL, m_bot) }, {} };
     m_unitTypeData[UnitType(sc2::UNIT_TYPEID::ZERG_LARVA, m_bot)] =                      { sc2::Race::Zerg, 0, 0, 2, 0, true, false, false, false, false, false, false, 0, 0, { UnitType() }, { UnitType() }, {} };
     m_unitTypeData[UnitType(sc2::UNIT_TYPEID::ZERG_EGG, m_bot)] =                        { sc2::Race::Zerg, 0, 0, 2, 0, true, false, false, false, false, false, false, 0, 0, { UnitType() }, { UnitType() }, {} };
+    // broodlord, overseer, cocoon, infected terrans, burrowed, creeptumor, lurker, locust, broodling, ravager, changeling, nydus worm?
+    */
 
     // Set the Mineral / Gas cost of each unit
     for (auto & kv : m_unitTypeData)
@@ -163,19 +171,59 @@ void TechTree::initUnitTypeData()
         kv.second.gasCost     = data.vespene_cost;
     }
 
+    m_unitTypeData[UnitType(0, m_bot)] = TypeData();
+
+    for( auto& type : m_bot.Observation()->GetUnitTypeData() )
+    {
+      TypeData typeData;
+
+      type.
+      typeData.race = type.race;
+      typeData.mineralCost = type.mineral_cost;
+      typeData.gasCost = type.vespene_cost;
+      typeData.supplyCost = type.food_required;
+      typeData.buildTime = type.build_time;
+      typeData.isUnit = true;
+      typeData.isBuilding = is_building( type );
+      typeData.isWorker = is_worker( type );
+      typeData.isRefinery = is_refinery( type );
+      typeData.isSupplyProvider = type.food_provided > 0;
+      typeData.isResourceDepot = is_resource_depot( type );
+      typeData.isAddon = type.require_attached;
+
+      typeData.buildAbility = type.ability_id;
+      typeData.warpAbility = what_ability_to_be_warped( type );
+
+      std::vector<UnitType> whatBuilds;
+      whatBuilds.push_back(UnitType(type.whatBuilds().first, m_bot));
+      typeData.whatBuilds = whatBuilds;
+
+      std::vector<UnitType> requiredUnits;
+      for (auto& req : type.requiredUnits())
+      {
+        requiredUnits.push_back(UnitType(req.first, m_bot));
+      }
+      typeData.requiredUnits = requiredUnits;
+
+      m_unitTypeData[ UnitType( type.unit_type_id, m_bot ) ] = typeData;
+    }
+
+
     // fix the cumulative prices of morphed buildings
     m_unitTypeData[UnitType(sc2::UNIT_TYPEID::ZERG_HIVE, m_bot)].mineralCost -= getData(UnitType(sc2::UNIT_TYPEID::ZERG_LAIR, m_bot)).mineralCost;
     m_unitTypeData[UnitType(sc2::UNIT_TYPEID::ZERG_LAIR, m_bot)].mineralCost -= getData(UnitType(sc2::UNIT_TYPEID::ZERG_HATCHERY, m_bot)).mineralCost;
     m_unitTypeData[UnitType(sc2::UNIT_TYPEID::TERRAN_PLANETARYFORTRESS, m_bot)].mineralCost -= getData(UnitType(sc2::UNIT_TYPEID::TERRAN_COMMANDCENTER, m_bot)).mineralCost;
     m_unitTypeData[UnitType(sc2::UNIT_TYPEID::TERRAN_ORBITALCOMMAND, m_bot)].mineralCost -= getData(UnitType(sc2::UNIT_TYPEID::TERRAN_COMMANDCENTER, m_bot)).mineralCost;
     m_unitTypeData[UnitType(sc2::UNIT_TYPEID::ZERG_GREATERSPIRE, m_bot)].mineralCost -= getData(UnitType(sc2::UNIT_TYPEID::ZERG_SPIRE, m_bot)).mineralCost;
+    
 }
 
 void TechTree::initUpgradeData()
 {
     // 0 data for null / error return
     m_upgradeData[0] = TypeData();
-
+    
+    /*
     // Terran Upgrades
     m_upgradeData[sc2::UPGRADE_ID::BANSHEECLOAK] =                      { sc2::Race::Terran, 100, 100, 0, 1760, false, false, false, false, false, false, false, sc2::ABILITY_ID::RESEARCH_BANSHEECLOAKINGFIELD, 0, { UnitType(sc2::UNIT_TYPEID::TERRAN_SCV, m_bot) }, {}, {} };
     m_upgradeData[sc2::UPGRADE_ID::BANSHEESPEED] =                      { sc2::Race::Terran, 200, 200, 0, 2720, false, false, false, false, false, false, false, sc2::ABILITY_ID::RESEARCH_BANSHEEHYPERFLIGHTROTORS, 0, { UnitType(sc2::UNIT_TYPEID::TERRAN_SCV, m_bot) }, {}, {} };
@@ -266,6 +314,7 @@ void TechTree::initUpgradeData()
     m_upgradeData[sc2::UPGRADE_ID::ZERGMISSILEWEAPONSLEVEL1] =          { sc2::Race::Zerg, 100, 100, 0, 2560, false, false, false, false, false, false, false, sc2::ABILITY_ID::RESEARCH_ZERGMISSILEWEAPONSLEVEL1, 0, { UnitType(sc2::UNIT_TYPEID::ZERG_EVOLUTIONCHAMBER, m_bot) }, {}, {} };
     m_upgradeData[sc2::UPGRADE_ID::ZERGMISSILEWEAPONSLEVEL2] =          { sc2::Race::Zerg, 150, 150, 0, 3040, false, false, false, false, false, false, false, sc2::ABILITY_ID::RESEARCH_ZERGMISSILEWEAPONSLEVEL2, 0, { UnitType(sc2::UNIT_TYPEID::ZERG_EVOLUTIONCHAMBER, m_bot) }, { UnitType(sc2::UNIT_TYPEID::ZERG_LAIR, m_bot), UnitType(sc2::UNIT_TYPEID::ZERG_HIVE, m_bot) }, {sc2::UPGRADE_ID::ZERGMISSILEWEAPONSLEVEL1} };
     m_upgradeData[sc2::UPGRADE_ID::ZERGMISSILEWEAPONSLEVEL3] =          { sc2::Race::Zerg, 200, 200, 0, 3520, false, false, false, false, false, false, false, sc2::ABILITY_ID::RESEARCH_ZERGMISSILEWEAPONSLEVEL3, 0, { UnitType(sc2::UNIT_TYPEID::ZERG_EVOLUTIONCHAMBER, m_bot) }, { UnitType(sc2::UNIT_TYPEID::ZERG_HIVE, m_bot) }, {sc2::UPGRADE_ID::ZERGMISSILEWEAPONSLEVEL2} };
+    */
 }
 #else
 void TechTree::initUpgradeData()
@@ -286,7 +335,7 @@ void TechTree::initUpgradeData()
         typeData.isBuilding = type.isBuilding();
         typeData.isWorker = type.isWorker();
         typeData.isRefinery = type.isRefinery();
-        typeData.isSupplyProvider = type.supplyProvided() > 0 && !type.isResourceDepot();
+        typeData.isSupplyProvider = type.supplyProvided() > 0;
         typeData.isResourceDepot = type.isResourceDepot();
         typeData.isAddon = type.isAddon();
 
@@ -351,7 +400,7 @@ const TypeData & TechTree::getData(const MetaType & type) const
 
 void TechTree::outputJSON(const std::string & filename) const
 {
-#ifdef SC2APIXXX
+#ifndef SC2APIXXX
     std::ofstream out(filename);
     out << "{\n";
     std::string q = "\"";

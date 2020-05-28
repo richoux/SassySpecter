@@ -48,6 +48,7 @@
     <ClCompile Include="..\src\SquadOrder.cpp" />
     <ClCompile Include="..\src\StrategyManager.cpp" />
     <ClCompile Include="..\src\TechTree.cpp" />
+    <ClCompile Include="..\src\TechTreeManager.cpp" />
     <ClCompile Include="..\src\Unit.cpp" />
     <ClCompile Include="..\src\UnitData.cpp" />
     <ClCompile Include="..\src\UnitInfoManager.cpp" />
@@ -86,6 +87,7 @@
     <ClInclude Include="..\src\SquadOrder.h" />
     <ClInclude Include="..\src\StrategyManager.h" />
     <ClInclude Include="..\src\TechTree.h" />
+    <ClInclude Include="..\src\TechTreeManager.h" />
     <ClInclude Include="..\src\Timer.hpp" />
     <ClInclude Include="..\src\Unit.h" />
     <ClInclude Include="..\src\UnitData.h" />
@@ -111,7 +113,7 @@
     <ConfigurationType>Application</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -123,7 +125,7 @@
     <ConfigurationType>Application</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -163,8 +165,8 @@
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <LibraryPath>C:\StarCraft AI\SC_APIs\SC2API_Binary_vs2017\lib;$(LibraryPath)</LibraryPath>
-    <IncludePath>C:\StarCraft AI\SC_APIs\SC2API_Binary_vs2017\include;$(IncludePath)</IncludePath>
+    <LibraryPath>H:\Developpement\StarCraft2_AI\cpp-sc2-dev\build\bin;$(LibraryPath)</LibraryPath>
+    <IncludePath>H:\Developpement\StarCraft2_AI\cpp-sc2-dev\include;H:\Developpement\StarCraft2_AI\cpp-sc2-dev\build\generated;H:\Developpement\StarCraft2_AI\cpp-sc2-dev\contrib\protobuf\src;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LibraryPath>C:\StarCraft AI\SC_APIs\BWAPI\BWAPILIB\Release;$(LibraryPath)</LibraryPath>
@@ -173,12 +175,12 @@
     <OutDir>$(ProjectDir)/../bin/</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <LibraryPath>H:\Developpement\StarCraft2_AI\SC2API_Binary_vs2017\lib;$(LibraryPath)</LibraryPath>
-    <IncludePath>H:\Developpement\StarCraft2_AI\SC2API_Binary_vs2017\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SC2API_DIR)\build\bin;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SC2API_DIR)\include;$(SC2API_DIR)\build\generated;$(SC2API_DIR)\contrib\protobuf\src;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <LibraryPath>H:\Developpement\StarCraft_IA\BWAPI_4\Release;$(LibraryPath)</LibraryPath>
-    <IncludePath>H:\Developpement\StarCraft_IA\BWAPI_4\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(BWAPI_DIR)\Release;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(BWAPI_DIR)\include;$(IncludePath)</IncludePath>
     <OutDir>$(ProjectDir)/../bin/</OutDir>
     <IntDir>$(SolutionName)\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
@@ -374,7 +376,7 @@
       <GenerateDebugInformation>No</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <ImportLibrary>C:/Libraries/SC2AI/SC2API/s2client-api/build/bin/Intermediate_bot.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Libraries/SC2AI/SC2API/s2client-api/build/bin/Intermediate_bot.pdb</ProgramDataBaseFile>
+      <ProgramDataBaseFile>$(SC2API)/build/bin/Intermediate_bot.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
       <Version>
       </Version>
