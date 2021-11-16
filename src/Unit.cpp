@@ -296,7 +296,7 @@ void Unit::move(const CCPosition & targetPosition) const
 {
     BOT_ASSERT(isValid(), "Unit is not valid");
 #ifdef SC2API
-    m_bot->Actions()->UnitCommand(m_unit, sc2::ABILITY_ID::MOVE, targetPosition);
+    m_bot->Actions()->UnitCommand(m_unit, sc2::ABILITY_ID::GENERAL_MOVE, targetPosition);
 #else
     m_unit->move(targetPosition);
 #endif
@@ -306,7 +306,7 @@ void Unit::move(const CCTilePosition & targetPosition) const
 {
     BOT_ASSERT(isValid(), "Unit is not valid");
 #ifdef SC2API
-    m_bot->Actions()->UnitCommand(m_unit, sc2::ABILITY_ID::MOVE, CCPosition((float)targetPosition.x, (float)targetPosition.y));
+    m_bot->Actions()->UnitCommand(m_unit, sc2::ABILITY_ID::GENERAL_MOVE, CCPosition((float)targetPosition.x, (float)targetPosition.y));
 #else
     m_unit->move(CCPosition(targetPosition));
 #endif
