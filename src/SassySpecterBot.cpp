@@ -56,6 +56,7 @@ void SassySpecterBot::OnGameStart()
     m_techTree.onStart();
     m_strategy.onStart();
     m_map.onStart();
+    m_map.printMap();
     m_unitInfo.onStart();
     m_bases.onStart();
     m_workers.onStart();

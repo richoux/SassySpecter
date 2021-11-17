@@ -29,8 +29,6 @@ class MapTools
 
     int getSectorNumber(int x, int y) const;
         
-    void printMap();
-
     float   terrainHeight(const CCPosition & point) const;
     bool    canBuild(int tileX, int tileY);
     bool    canWalk(int tileX, int tileY);
@@ -81,6 +79,8 @@ public:
     bool    isDepotBuildableTile(int tileX, int tileY) const;
     
     CCTilePosition getLeastRecentlySeenTile() const;
+
+    void printMap();
 
     // returns a list of all tiles on the map, sorted by 4-direcitonal walk distance from the given position
     const std::vector<CCTilePosition> & getClosestTilesTo(const CCTilePosition & pos) const;

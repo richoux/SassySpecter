@@ -482,7 +482,13 @@ void MapTools::printMap()
     {
         for (int x(0); x < m_width; ++x)
         {
-            ss << isWalkable(x, y);
+          if( !isWalkable( x, y ) )
+            ss << 1;
+          else
+            if( !isBuildable( x, y ) )
+              ss << 2;
+            else
+              ss << 0;
         }
 
         ss << "\n";
