@@ -477,26 +477,36 @@ bool MapTools::isBuildable(const CCTilePosition & tile) const
 
 void MapTools::printMap()
 {
-    std::stringstream ss;
+    std::stringstream sswalk;
+    std::stringstream ssheight;
+    
     for (int y(0); y < m_height; ++y)
     {
         for (int x(0); x < m_width; ++x)
         {
+          ssheight << BWAPI::Broodwar->getGroundHeight( x, y );
           if( !isWalkable( x, y ) )
-            ss << 1;
+            sswalk << 1;
           else
             if( !isBuildable( x, y ) )
-              ss << 2;
+              sswalk << 2;
             else
-              ss << 0;
+              sswalk << 0;
         }
 
-        ss << "\n";
+        sswalk << "\n";
+        ssheight << "\n";
     }
 
-    std::ofstream out("map.txt");
-    out << ss.str();
-    out.close();
+    std::string mapname = BWAPI::Broodwar->mapFileName().append( ".txt" );
+    std::ofstream out_walk( mapname );
+    out_walk << sswalk.str();
+    out_walk.close();
+
+    std::string mapname_height = BWAPI::Broodwar->mapFileName().append( "_height.txt" );
+    std::ofstream out_height( mapname_height );
+    out_height << ssheight.str();
+    out_height.close();
 }
 
 bool MapTools::isDepotBuildableTile(int tileX, int tileY) const
