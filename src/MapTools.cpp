@@ -484,7 +484,11 @@ void MapTools::printMap()
     {
         for (int x(0); x < m_width; ++x)
         {
+#ifdef SC2API
+          ssheight << terrainHeight( x, y );
+#else
           ssheight << BWAPI::Broodwar->getGroundHeight( x, y );
+#endif
           if( !isWalkable( x, y ) )
             sswalk << 1;
           else
@@ -498,12 +502,22 @@ void MapTools::printMap()
         ssheight << "\n";
     }
 
+#ifdef SC2API
+    std::string mapname = m_bot.Observation()->GetGameInfo().local_map_path;
+    mapname.append( ".txt" );
+#else
     std::string mapname = BWAPI::Broodwar->mapFileName().append( ".txt" );
+#endif
     std::ofstream out_walk( mapname );
     out_walk << sswalk.str();
     out_walk.close();
 
+#ifdef SC2API
+    std::string mapname_height = m_bot.Observation()->GetGameInfo().local_map_path;
+    mapname_height.append( "_height.txt" );
+#else
     std::string mapname_height = BWAPI::Broodwar->mapFileName().append( "_height.txt" );
+#endif
     std::ofstream out_height( mapname_height );
     out_height << ssheight.str();
     out_height.close();
