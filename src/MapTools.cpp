@@ -6,6 +6,7 @@
 #include <sstream>
 #include <fstream>
 #include <array>
+#include <algorithm>
 
 #ifdef SC2API
 namespace {
@@ -485,7 +486,7 @@ void MapTools::printMap()
         for (int x(0); x < m_width; ++x)
         {
 #ifdef SC2API
-          ssheight << terrainHeight( x, y );
+          ssheight << std::max( 0.0f, terrainHeight( x, y )/2 - 2 ) << " ";
 #else
           ssheight << BWAPI::Broodwar->getGroundHeight( x, y );
 #endif

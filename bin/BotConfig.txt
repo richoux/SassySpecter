@@ -19,7 +19,7 @@
         "BotRace"                   : "Random",
         "EnemyDifficulty"           : 2,
         "EnemyRace"                 : "Random",
-        "MapFile"                   : "SubmarineLE.SC2Map",
+        "MapFile"                   : "DeathauraLE.SC2Map",
         "StepSize"                  : 1
     },
         
