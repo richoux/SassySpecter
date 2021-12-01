@@ -64,6 +64,7 @@ void MapTools::onStart()
     m_walkable       = vvb(m_width, std::vector<bool>(m_height, true));
     m_buildable      = vvb(m_width, std::vector<bool>(m_height, false));
     m_depotBuildable = vvb(m_width, std::vector<bool>(m_height, false));
+    m_resources      = vvb(m_width, std::vector<bool>( m_height, false ));
     m_lastSeen       = vvi(m_width, std::vector<int>(m_height, 0));
     m_sectorNumber   = vvi(m_width, std::vector<int>(m_height, 0));
     m_terrainHeight  = vvf(m_width, std::vector<float>(m_height, 0.0f));
@@ -104,7 +105,8 @@ void MapTools::onStart()
             for (int y=tileY; y<tileY+height; ++y)
             {
                 m_buildable[x][y] = false;
-
+                //if( ( resource.getType().isMineral() && resource.getResourceAmount() >= 40 ) || ( resource.getType().isGeyser() && resource.getResourceAmount() >= 300 ) )
+                m_resources[ x ][ y ] = true;
                 // depots can't be built within 3 tiles of any resource
                 for (int rx=-3; rx<=3; rx++)
                 {
@@ -138,6 +140,7 @@ void MapTools::onStart()
             for (int y=tileY; y<tileY+resource->getType().tileHeight(); ++y)
             {
                 m_buildable[x][y] = false;
+                m_resources[ x ][ y ] = true;
 
                 // depots can't be built within 3 tiles of any resource
                 for (int rx=-3; rx<=3; rx++)
@@ -480,6 +483,7 @@ void MapTools::printMap()
 {
     std::stringstream sswalk;
     std::stringstream ssheight;
+    std::stringstream ssresources;
     
     for (int y(0); y < m_height; ++y)
     {
@@ -497,15 +501,21 @@ void MapTools::printMap()
               sswalk << 2;
             else
               sswalk << 0;
+
+          if( m_resources[ x ][ y ] )
+            ssresources << 1;
+          else
+            ssresources << 0;
         }
 
         sswalk << "\n";
         ssheight << "\n";
+        ssresources << "\n";
     }
 
 #ifdef SC2API
     std::string mapname = m_bot.Observation()->GetGameInfo().local_map_path;
-    mapname.append( ".txt" );
+    mapname.replace( mapname.end() - 7, mapname.end(), ".txt" );
 #else
     std::string mapname = BWAPI::Broodwar->mapFileName().append( ".txt" );
 #endif
@@ -515,13 +525,23 @@ void MapTools::printMap()
 
 #ifdef SC2API
     std::string mapname_height = m_bot.Observation()->GetGameInfo().local_map_path;
-    mapname_height.append( "_height.txt" );
+    mapname_height.replace( mapname_height.end() - 7, mapname_height.end(), "_height.txt" );
 #else
     std::string mapname_height = BWAPI::Broodwar->mapFileName().append( "_height.txt" );
 #endif
     std::ofstream out_height( mapname_height );
     out_height << ssheight.str();
     out_height.close();
+
+#ifdef SC2API
+    std::string mapname_resources = m_bot.Observation()->GetGameInfo().local_map_path;
+    mapname_resources.replace( mapname_resources.end() - 7, mapname_resources.end(), "_resources.txt" );
+#else
+    std::string mapname_resources = BWAPI::Broodwar->mapFileName().append( "_resources.txt" );
+#endif
+    std::ofstream out_resources( mapname_resources );
+    out_resources << ssresources.str();
+    out_resources.close();
 }
 
 bool MapTools::isDepotBuildableTile(int tileX, int tileY) const

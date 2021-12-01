@@ -41,6 +41,7 @@ public:
     CCHealth getHitPoints() const;
     CCHealth getShields() const;
     CCHealth getEnergy() const;
+    int getResourceAmount() const;
     CCPlayer getPlayer() const;
     CCUnitID getID() const;
     float getBuildPercentage() const;

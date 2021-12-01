@@ -118,6 +118,16 @@ CCHealth Unit::getEnergy() const
 #endif
 }
 
+int Unit::getResourceAmount() const
+{
+  BOT_ASSERT( isValid(), "Unit is not valid" );
+#ifdef SC2API
+  return std::max( m_unit->mineral_contents, m_unit->vespene_contents );
+#else
+  return m_unit->getResources();
+#endif
+}
+
 float Unit::getBuildPercentage() const
 {
     BOT_ASSERT(isValid(), "Unit is not valid");
