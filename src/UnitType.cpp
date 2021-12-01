@@ -173,9 +173,12 @@ bool UnitType::isGeyser() const
 #ifdef SC2API
     switch (m_type.ToType()) 
     {
-        case sc2::UNIT_TYPEID::NEUTRAL_VESPENEGEYSER        : return true;
-        case sc2::UNIT_TYPEID::NEUTRAL_PROTOSSVESPENEGEYSER : return true;
-        case sc2::UNIT_TYPEID::NEUTRAL_SPACEPLATFORMGEYSER  : return true;
+        case sc2::UNIT_TYPEID::NEUTRAL_PROTOSSVESPENEGEYSER  : return true;
+        case sc2::UNIT_TYPEID::NEUTRAL_PURIFIERVESPENEGEYSER : return true;
+        case sc2::UNIT_TYPEID::NEUTRAL_RICHVESPENEGEYSER     : return true;
+        case sc2::UNIT_TYPEID::NEUTRAL_SHAKURAVESPENEGEYSER  : return true;
+        case sc2::UNIT_TYPEID::NEUTRAL_SPACEPLATFORMGEYSER   : return true;
+        case sc2::UNIT_TYPEID::NEUTRAL_VESPENEGEYSER         : return true;
         default: return false;
     }
 #else
@@ -188,12 +191,19 @@ bool UnitType::isMineral() const
 #ifdef SC2API
     switch (m_type.ToType()) 
     {
-        case sc2::UNIT_TYPEID::NEUTRAL_MINERALFIELD         : return true;
-        case sc2::UNIT_TYPEID::NEUTRAL_MINERALFIELD750      : return true;
-        case sc2::UNIT_TYPEID::NEUTRAL_RICHMINERALFIELD     : return true;
-        case sc2::UNIT_TYPEID::NEUTRAL_RICHMINERALFIELD750  : return true;
-        case sc2::UNIT_TYPEID::NEUTRAL_LABMINERALFIELD		: return true;
-        case sc2::UNIT_TYPEID::NEUTRAL_LABMINERALFIELD750	: return true;
+        case sc2::UNIT_TYPEID::NEUTRAL_BATTLESTATIONMINERALFIELD    : return true;
+        case sc2::UNIT_TYPEID::NEUTRAL_BATTLESTATIONMINERALFIELD750 : return true;
+        case sc2::UNIT_TYPEID::NEUTRAL_LABMINERALFIELD		          : return true;
+        case sc2::UNIT_TYPEID::NEUTRAL_LABMINERALFIELD750	          : return true;
+        case sc2::UNIT_TYPEID::NEUTRAL_MINERALFIELD                 : return true;
+        case sc2::UNIT_TYPEID::NEUTRAL_MINERALFIELD450              : return true;
+        case sc2::UNIT_TYPEID::NEUTRAL_MINERALFIELD750              : return true;
+        case sc2::UNIT_TYPEID::NEUTRAL_PURIFIERMINERALFIELD		      : return true;
+        case sc2::UNIT_TYPEID::NEUTRAL_PURIFIERMINERALFIELD750	    : return true;
+        case sc2::UNIT_TYPEID::NEUTRAL_PURIFIERRICHMINERALFIELD		  : return true;
+        case sc2::UNIT_TYPEID::NEUTRAL_PURIFIERRICHMINERALFIELD750	: return true;
+        case sc2::UNIT_TYPEID::NEUTRAL_RICHMINERALFIELD             : return true;
+        case sc2::UNIT_TYPEID::NEUTRAL_RICHMINERALFIELD750          : return true;
         default: return false;
     }
 #else
