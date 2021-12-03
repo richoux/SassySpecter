@@ -32,7 +32,7 @@ void BaseLocationManager::onStart()
 
 #ifndef SC2API
         // for BWAPI we have to eliminate minerals that have low resource counts
-        if (mineral.getUnitPtr()->getResources() < 100) { continue; }
+        if (mineral.getUnitPtr()->getInitialResources() < 100) { continue; }
 #endif
 
         bool foundCluster = false;
@@ -82,7 +82,7 @@ void BaseLocationManager::onStart()
         }
     }
 
-    // add the base locations if there are more than 4 resouces in the cluster
+    // add the base locations if there are more than 4 resources in the cluster
     int baseID = 0;
     for (auto & cluster : resourceClusters)
     {
