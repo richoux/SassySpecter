@@ -3,6 +3,7 @@
 #include <vector>
 #include "DistanceMap.h"
 #include "UnitType.h"
+#include "terrain_analysis.hpp"
 
 class SassySpecterBot;
 
@@ -13,7 +14,8 @@ class MapTools
     int     m_height;
     float   m_maxZ;
     int     m_frame;
-    
+
+    taunt::terrain_analysis ta;
 
     // a cache of already computed distance maps, which is mutable since it only acts as a cache
     mutable std::map<std::pair<int,int>, DistanceMap>   m_allMaps;   

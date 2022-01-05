@@ -175,12 +175,12 @@
     <OutDir>$(ProjectDir)/../bin/</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <LibraryPath>$(SC2API_DIR)\build\bin;$(LibraryPath)</LibraryPath>
-    <IncludePath>$(SC2API_DIR)\include;$(SC2API_DIR)\build\generated;$(SC2API_DIR)\contrib\protobuf\src;$(IncludePath)</IncludePath>
+    <LibraryPath>$(TAUNT_DIR)\lib;$(GHOST_DIR)\lib;$(SC2API_DIR)\build\bin;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(BOOST_DIR);$(TAUNT_DIR)\include;$(GHOST_DIR)\include;$(SC2API_DIR)\include;$(SC2API_DIR)\build\generated;$(SC2API_DIR)\contrib\protobuf\src;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <LibraryPath>$(BWAPI_DIR)\Release;$(LibraryPath)</LibraryPath>
-    <IncludePath>$(BWAPI_DIR)\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(TAUNT_DIR)\lib;$(GHOST_DIR)\lib32;$(BWAPI_DIR)\Release;$(BWTA2_DIR)\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(BWAPI_DIR)\include;$(BOOST_DIR);$(TAUNT_DIR)\include;$(GHOST_DIR)\include;$(BWTA2_DIR)\include;$(IncludePath)</IncludePath>
     <OutDir>$(ProjectDir)/../bin/</OutDir>
     <IntDir>$(SolutionName)\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
@@ -303,6 +303,7 @@
       <Optimization>MaxSpeed</Optimization>
       <AdditionalOptions>-DNOMINMAX -DSC2API %(AdditionalOptions)</AdditionalOptions>
       <DisableSpecificWarnings>4996</DisableSpecificWarnings>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;_SCL_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -318,7 +319,7 @@
     </Midl>
     <Link>
       <AdditionalOptions>%(AdditionalOptions)  /machine:x64</AdditionalOptions>
-      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;sc2api.lib;sc2lib.lib;sc2utils.lib;sc2renderer.lib;sc2protocol.lib;libprotobuf.lib;civetweb.lib;winmm.lib;imm32.lib;version.lib;dinput8.lib</AdditionalDependencies>
+      <AdditionalDependencies>Taunt_SC2.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;sc2api.lib;sc2lib.lib;sc2utils.lib;sc2renderer.lib;sc2protocol.lib;libprotobuf.lib;civetweb.lib;winmm.lib;imm32.lib;version.lib;dinput8.lib;ghost_static.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>No</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
@@ -371,7 +372,7 @@
     </Midl>
     <Link>
       <AdditionalOptions>%(AdditionalOptions)  /machine:x86</AdditionalOptions>
-      <AdditionalDependencies>BWAPILIB.lib;BWAPIClient.lib</AdditionalDependencies>
+      <AdditionalDependencies>Taunt_SC1.lib;BWAPILIB.lib;BWAPIClient.lib;ghost_static.lib;BWTA.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>No</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>

@@ -2,6 +2,10 @@
 #include "Util.h"
 #include "SassySpecterBot.h"
 
+#if defined BWTA2
+#include <BWTA.h>
+#endif
+
 #include <iostream>
 #include <sstream>
 #include <fstream>
@@ -47,12 +51,44 @@ MapTools::MapTools(SassySpecterBot & bot)
     , m_height  (0)
     , m_maxZ    (0.0f)
     , m_frame   (0)
+#if defined SC2API
+  , ta{ &m_bot }
+#endif
 {
 
 }
 
 void MapTools::onStart()
 {
+  std::stringstream timespan;
+
+#if defined BWTA2
+  std::string filename = BWAPI::Broodwar->mapFileName() + "_BWTA2.txt";
+#else
+  std::string filename = ta.map_filename() + "_taunted.txt";
+  std::cout << "ta.map_filename(): " << ta.map_filename() << "\n";
+#endif
+
+  std::chrono::duration<double, std::milli> elapsed_time( 0 );
+  std::chrono::time_point<std::chrono::steady_clock> start_analyze;
+
+  start_analyze = std::chrono::steady_clock::now();
+#if defined BWTA2
+  BWTA::analyze();
+#else
+  ta.analyze();
+#endif
+  elapsed_time = std::chrono::steady_clock::now() - start_analyze;
+  timespan << elapsed_time.count();
+
+  std::ofstream out_timespan( filename );
+  out_timespan << timespan.str();
+  out_timespan.close();
+
+#if not defined BWTA2
+  ta.print();
+#endif
+
 #ifdef SC2API
     m_width  = m_bot.Observation()->GetGameInfo().width;
     m_height = m_bot.Observation()->GetGameInfo().height;
