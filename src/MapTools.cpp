@@ -2,6 +2,7 @@
 #include "Util.h"
 #include "SassySpecterBot.h"
 
+//#define BWTA2
 #if defined BWTA2
 #include <BWTA.h>
 #endif
