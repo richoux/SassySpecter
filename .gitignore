@@ -18,6 +18,7 @@ bin/SassySpecter
 bin/*.exe
 bin/*.ilk
 bin/TechTree.json
+bin/backup
 *.tlog
 *.obj
 vs/RelWithDebInfo/SassySpecter.log
